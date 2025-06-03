@@ -1,4 +1,3 @@
-/* === Hero Section === */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -35,16 +34,12 @@ header {
 .left-image { left: 0; max-width: 200px; }
 .right-image { right: 0; max-width: 184.8px; }
 header h1 { margin: 0; font-size: 4.5rem; text-align: center; z-index: 1; }
-/* === Boutique Title Font === */
 header h1 {
   font-family: 'Cormorant Garamond', serif !important;
   font-style: italic !important;
   font-weight: 700 !important;
   text-shadow: #C28840 2px 2px 4px;
 }
-/* === End Boutique Title Font === */
-
-/* === About Us Section === */
 .about-us, .contact-us, .reviews, .saree-collection {
   background: #fafafa;
   border-radius: 16px;
@@ -60,7 +55,6 @@ header h1 {
   text-align: center;
   box-sizing: border-box;
 }
-
 .about-content {
   display: flex;
   align-items: center;
@@ -74,19 +68,12 @@ header h1 {
 .about-text h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
 .about-text p { font-size: 1rem; line-height: 1.6; margin-bottom: 1rem; }
 .about-text .highlight { font-weight: bold; text-align: center; }
-
-/* === Saree Collection Section === */
 .gallery {
   display: grid;
   grid-template-columns: repeat(6, 1fr); /* 6 columns for desktop */
   gap: 0.7rem;
   padding: 1rem;
   width: 101%;
-}
-@media (max-width: 1023px) {
-  .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* fallback for tablets and below */
-  }
 }
 .gallery img {
   max-width: 400px;
@@ -96,8 +83,6 @@ header h1 {
   transition: transform 0.2s;
 }
 .gallery img:hover { transform: scale(1.04); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-
-/* === Contact Us Section === */
 .contact-us form, .review-form {
   max-width: 600px;
   margin: auto;
@@ -165,8 +150,6 @@ input::placeholder, textarea::placeholder {
 .or-text { font-size: 1rem; font-weight: bold; color: #333; }
 body.dark-mode .or-text { color: #fafafa; }
 .hidden-field { display: none; }
-
-/* === Centralized Customer Reviews & What Our Customers Say Section Styles === */
 .reviews {
   background: #fafafa;
   border-radius: 16px;
@@ -215,8 +198,6 @@ body.dark-mode .or-text { color: #fafafa; }
   line-height: 1.6 !important;
   font-size: 1em;
 }
-
-/* Style for reviewer's name in both static and dynamic reviews */
 .reviews li strong,
 .review-carousel-list .reviewer-name {
   font-family: 'Cormorant Garamond', serif!important;
@@ -229,8 +210,6 @@ body.dark-mode .reviews li strong,
 body.dark-mode .review-carousel-list .reviewer-name {
   color: #e0c97f;
 }
-
-/* Top Customers name color */
 .top-customers .customer-card h3 {
   font-family: 'Cormorant Garamond', serif !important;
   font-style: italic;
@@ -240,44 +219,13 @@ body.dark-mode .review-carousel-list .reviewer-name {
 body.dark-mode .top-customers .customer-card h3 {
   color: #e0c97f !important;
 }
-
-/* --- Mobile Styles for Customer Reviews & What Our Customers Say --- */
-@media (max-width: 700px) {
-  .reviews {
-    padding: 1.2rem 0.9rem !important;
-    max-width: 95vw;
-  }
-  .reviews h2,
-  .review-list h3 {
-    font-size: 1.2rem !important;
-    margin-bottom: 1rem !important;
-  }
-  .review-list {
-    margin-top: 1.2rem;
-    padding: 0;
-  }
-  .review-list li {
-    font-size: 0.92rem;
-    border-radius: 1px;
-    margin-bottom: 0.7em;
-    padding: 0.5em 0.7em;
-    text-align: justify !important;
-    line-height: 1.35 !important;
-  }
-}
-/* === End Centralized Customer Reviews & What Our Customers Say Section === */
-
-/* === Footer Section === */
 footer a { 
   color: #0000EE; text-decoration: none;
-         }
-
+}
 body.dark-mode footer small {
   color: #f3f3f3; /* Use #f3f3f3 instead of gold in dark mode */
   opacity: 1;
 }
-
-/* === Theme Toggle Button === */
 .toggle-mode-btn {
   position: fixed;
   top: 1rem;
@@ -296,8 +244,6 @@ body.dark-mode footer small {
   justify-content: center;
   transition: background 0.2s, color 0.2s;
 }
-
-/* === Dark Mode Styles === */
 body.dark-mode {
   background: #181818;
   color: #f3f3f3;
@@ -344,8 +290,6 @@ body.dark-mode footer a {
   color: #4ec3fa;
   text-decoration: underline;
 }
-
-/* === Section Headings (General) === */
 .about-us h2,
 .saree-collection h2,
 .contact-us h2,
@@ -357,8 +301,6 @@ body.dark-mode footer a {
   font-weight: 700;
   text-align: center;
 }
-
-/* === Byline/Branding === */
 .byline-desktop {
   display: block;
   font-family: 'Dancing Script', 'Pacifico', cursive, 'Comic Sans MS', sans-serif;
@@ -369,40 +311,11 @@ body.dark-mode footer a {
   font-weight: 400;
   text-align: center;
 }
-
-/* === Responsive Headings === */
-@media (max-width: 768px) {
-  .about-us h2,
-  .saree-collection h2,
-  .contact-us h2,
-  .reviews h2,
-  .review-list h3 { font-size: 1.2rem; }
-  header { padding: 4.5rem 2rem; }
-  .header-content { flex-direction: column; gap: 10px; }
-  .header-image { max-width: 120px; }
-  header h1 { font-size: 1.79rem; }
-  .byline-desktop { font-size: 1rem;margin-top: 0.4rem; }
-  .left-image { max-width: 100px; }
-  .right-image { max-width: 93px; }
-  .about-content { flex-direction: column; text-align: center; }
-  .about-content img { max-width: 50%; }
-  .about-text { text-align: justify; }
-  .about-text h3 { font-size: 1.2rem; text-align: center; }
-  .about-text p { text-align: center; }
-  .about-text .justified-text { text-align: justify; }
-  .contact-us form, .review-form { padding: 0 1rem; }
-  .gallery { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0.5rem; padding: 0; }
-  .gallery img { border-radius: 1px; }
-}
-
-/* === Accessibility Focus Styles === */
 button:focus, input:focus, textarea:focus {
   outline: 2px solid #87ceeb;
   outline-offset: 2px;
   border-radius: 12px;
 }
-
-/* === Lightbox Styles === */
 .lightbox {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
@@ -419,13 +332,7 @@ body.lightbox-active #lightbox-image { filter: none; }
   position: absolute; top: 16px; right: 24px;
   background: transparent; border: none; font-size: 2rem; color: #fff; cursor: pointer; z-index: 10;
 }
-
-/* === Review Form Spacing === */
 .review-form { margin-bottom: 0.8rem !important; }
-
-
-
-/* === Top Customers Section === */
 .top-customers {
   background: #fafafa;
   border-radius: 16px;
@@ -436,7 +343,6 @@ body.lightbox-active #lightbox-image { filter: none; }
   padding: 2rem 1.5rem;
   text-align: center;
 }
-
 .top-customers h2 {
   font-size: 2rem; /* Match this to your other section headings */
 }
@@ -475,65 +381,6 @@ body.lightbox-active #lightbox-image { filter: none; }
 body.dark-mode .top-customers .customer-card h3 {
   color: #e0c97f !important;
 }
-
-/* === Top Customers Responsive & Stack === */
-@media (max-width: 700px) {
-  .about-us h2,
-  .about-us-carousel h2,
-  .saree-collection h2,
-  .contact-us h2,
-  .reviews h2,
-  .review-list h3,
-  .top-customers h2 {
-    font-size: 1.2rem !important;
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 700;
-    margin-bottom: 1rem !important;
-    text-align: center;
-  }
-  .top-customers {
-    padding: 1.2rem 0.2rem;
-  }
-
-  .customer-card p, .customer-card .card-text, .carousel-content.improved-content p {
-  text-align: justify !important;
-}
-  .customer-stack .customer-card {
-    display: none;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-  .customer-stack.active .customer-card.active {
-    display: block;
-  }
-  
-  .contact-us {
-    padding: 1.2rem 0.9rem !important;
-  }
-  .contact-us form {
-    padding: 1.2rem 0rem !important;
-    max-width: 95%;
-  }
-  .reviews {
-    padding: 0.5rem 0.9rem !important;
-  }
-  .review-form {
-    padding: 0.5rem 0rem !important;
-    max-width: 95%;
-  }
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.4rem;
-    padding: 0.3rem;
-    width: 109%;
-  }
-  .gallery img {
-    border-radius: 1px;
-    margin: 0;
-  }
-}
-  
-
 body.dark-mode .top-customers {
   background: #232323;
   color: #f3f3f3;
@@ -547,8 +394,6 @@ body.dark-mode .customer-card {
 body.dark-mode .customer-img {
   border: 2px solid #4ec3fa;
 }
-
-/* === About Us Carousel Section === */
 .about-us-carousel {
   margin: 0 0 3rem 0;
   text-align: center;
@@ -612,20 +457,6 @@ body.dark-mode .carousel-arrow:hover, body.dark-mode .carousel-arrow:focus {
   border-color: #8be18b;
   color: #fff;
 }
-@media (max-width: 700px) {
-  .carousel-arrow {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-    min-height: 38px;
-    font-size: 1.2em;
-  }
-  .about-us-carousel .carousel-arrow.left,
-  .about-us-carousel .carousel-arrow.right {
-    top: 15%; /* Move arrows higher up */
-    transform: translateY(-50%);
-  }
-}
 .carousel-slide {
   display: flex;
   width: 900px;
@@ -658,7 +489,6 @@ body.dark-mode .carousel-arrow:hover, body.dark-mode .carousel-arrow:focus {
   z-index: 2;
   transform: translateX(0);
 }
-/* Slide/fade animation classes */
 .carousel-box.improved-box.slide-in-right {
   opacity: 1;
   transform: translateX(80px);
@@ -780,83 +610,6 @@ body.dark-mode .carousel-content.improved-content .subtitle {
   min-height: 0;
   margin-top: 1.2rem;
 }
-@media (max-width: 900px) {
-  .carousel-content.improved-content .button {
-    font-size: 0.75rem;
-    width: 80px;
-    padding: 0.3rem 0.1rem;
-    margin-top: 1rem;
-  }
-}
-@media (max-width: 700px) {
-  .carousel-content.improved-content .button {
-    font-size: 0.7rem;
-    width: 70px;
-    padding: 0.2rem 0.1rem;
-    margin-top: 0.8rem;
-  }
-}
-@media (max-width: 900px) {
-  .carousel-content.improved-content {
-    padding: 0 0.7rem;
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-  .carousel-content.improved-content h3 {
-    font-size: 1.1rem;
-  }
-  .carousel-content.improved-content .subtitle {
-    font-size: 0.95rem;
-  }
-  .carousel-content.improved-content p {
-    font-size: 0.88rem;
-    line-height: 1.3;
-    text-align: justify;
-  }
-  .carousel-content.improved-content .button {
-    font-size: 0.95rem;
-    width: 140px;
-    padding: 0.6rem 0.5rem;
-  }
-}
-@media (max-width: 700px) {
-  .carousel-content.improved-content {
-    border-radius: 0 0 18px 18px;
-    text-align: center;
-    align-items: center;
-    padding: 1.2rem 0.5rem;
-    height: auto;
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-  .carousel-content.improved-content h3 {
-    font-size: 1rem;
-  }
-  .carousel-content.improved-content .subtitle {
-    font-size: 0.9rem;
-  }
-  .carousel-content.improved-content p {
-    font-size: 0.82rem;
-    line-height: 1.2;
-    max-height: 8em;
-    text-align: justify;
-  }
-  .carousel-content.improved-content .button {
-    font-size: 0.9rem;
-    width: 120px;
-    padding: 0.5rem 0.3rem;
-  }
-}
-
-/* === About Us Carousel Mobile Colors === */
-@media (max-width: 700px) {
-  .carousel-box.improved-box {
-    background: #fafafa;
-  }
-  body.dark-mode .carousel-box.improved-box {
-    background: #232323 !important;
-  }
-}
 body.dark-mode .carousel-img-col {
   background: #232323;
 }
@@ -872,8 +625,6 @@ body.dark-mode .carousel-content.improved-content .subtitle {
 body.dark-mode .carousel-content.improved-content p {
   color: #f3f3f3;
 }
-
-/* === Carousel Indicators === */
 .carousel-indicators {
   display: flex;
   justify-content: center;
@@ -902,136 +653,6 @@ body.dark-mode .carousel-dot.active {
   background: #8be18b;
   box-shadow: 0 2px 8px rgba(139,225,139,0.18);
 }
-
-@media (max-width: 700px) {
-  .carousel-slide {
-    flex-direction: column;
-    width: 100vw;
-    max-width: 100vw;
-    min-width: 0;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0;
-  }
-  .carousel-box.improved-box {
-    scale: 0.95 !important;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-width: 0;
-    width: 100vw;
-    max-width: 100vw;
-    border-radius: 0;
-    box-shadow: none;
-    margin: 0;
-    padding: 0 0 1.2rem 0;
-    background: #fafafa; /* Changed from #181818 to #fafafa for light mode */
-  }
-  .carousel-img-col {
-    width: 100vw;
-    max-width: 100vw;
-    min-width: 0;
-    flex: none;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-  }
-  .carousel-image.improved-green-bg {
-    width: 60vw;
-    max-width: 200px;
-    height: auto;
-    aspect-ratio: 1/1;
-    margin: 1.2rem auto 0.5rem auto;
-    border-radius: 0;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .carousel-image.improved-green-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0;
-    display: block;
-    margin: 0 auto;
-  }
-  .carousel-content.improved-content {
-    width: 98vw;
-    max-width: 98vw;
-    min-width: 0;
-    border-radius: 0;
-    padding: 1.1rem 0.7rem 0.7rem 0.7rem;
-    margin: 0 auto;
-    background: #fff; /* Changed from #232323 to #fff for light mode */
-    color: #222;      /* Changed from #f3f3f3 to #222 for light mode */
-    box-shadow: none;
-    align-items: center;
-    text-align: center;
-  }
-  .carousel-content.improved-content p {
-    font-size: 0.92rem;
-    margin-bottom: 0.7rem;
-    text-align: justify;
-    line-height: 1.35;
-    color: #222;
-  }
-  .carousel-content.improved-content .button {
-    font-size: 1rem;
-    width: 80vw;
-    max-width: 220px;
-    margin: 1.1rem auto 0 auto;
-    padding: 0.7rem 0.2rem;
-    display: block;
-    background: linear-gradient(90deg, #A3D9EC 0%, #7EC8E3 100%);
-    color: #232323;
-  }
-  .carousel-indicators {
-    margin-top: 0.7rem;
-    margin-bottom: 0.7rem;
-    gap: 0.5rem;
-  }
-  .carousel-dot {
-    width: 12px;
-    height: 12px;
-  }
-  .carousel-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 38px;
-    height: 38px;
-    font-size: 1.5rem;
-    background: #22304a;
-    left: 8px;
-    right: auto;
-  }
-  .carousel-arrow.right {
-    left: auto;
-    right: 8px;
-  }
-}
-
-@media (max-width: 700px) {
-  body.dark-mode .carousel-content.improved-content {
-    background: #232323 !important;
-    color: #f3f3f3 !important;
-  }
-  body.dark-mode .carousel-content.improved-content h3 {
-    color: #8be18b !important;
-  }
-  body.dark-mode .carousel-content.improved-content .subtitle {
-    color: #b6eeb6 !important;
-  }
-  body.dark-mode .carousel-content.improved-content p {
-    color: #f3f3f3 !important;
-    text-align: justify;
-  }
-}
-
-/* --- TOP CUSTOMERS CAROUSEL STACK --- */
 .top-customers-carousel {
   display: flex;
   align-items: center;
@@ -1096,48 +717,13 @@ body.dark-mode #customersIndicators .carousel-dot.active {
   background: #8be18b;
   box-shadow: 0 2px 8px rgba(139,225,139,0.18);
 }
-/* Mobile-only adjustments for About Us carousel arrows */
-@media (max-width: 700px) {
-  .about-us-carousel .carousel-container.improved-carousel {
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-  }
-  .about-us-carousel .carousel-arrow.left {
-    position: absolute;
-    left: 5vw;
-    top: 15%; /* Move arrows higher up */
-    transform: translateY(-50%);
-    z-index: 10;
-  }
-  .about-us-carousel .carousel-arrow.right {
-    position: absolute;
-    right: 5vw;
-    top: 15%; /* Move arrows higher up */
-    transform: translateY(-50%);
-    z-index: 10;
-  }
-  .about-us-carousel .carousel-slide {
-    margin-bottom: 0;
-  }
-}
-
-/* === Gallery Filter Button === */
 .filter-btn {
-  max-width: 7%;
-  margin-bottom: 0.2rem;
-  margin-top: 0.2rem;
-  align-self: flex-end;
-  font-size: 0.92rem;
-  padding: 0.32rem 0.7rem;
-  background: linear-gradient(90deg, #A3D9EC 0%, #7EC8E3 100%);
-  color: #222;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 0 2px 8px 0 rgba(163,217,236,0.08);
-  transition: background 0.3s, color 0.3s, transform 0.2s;
-  cursor: pointer;
+  max-width: 100%;
+  width: 7%;
+  min-width: 50px;
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .filter-btn:hover {
   background: linear-gradient(90deg, #7EC8E3 0%, #A3D9EC 100%);
@@ -1175,8 +761,6 @@ body.dark-mode .filter-dropdown {
   border: none !important;
   box-shadow: none !important;
 }
-
-/* Ensure filter group and options contrast in light mode */
 .filter-group {
   background: rgba(0,0,0,0.03);
 }
@@ -1197,7 +781,6 @@ body.dark-mode .filter-dropdown {
   font-size: 1em;
   color: #232323;
 }
-
 body.dark-mode .filter-group {
   background: rgba(255,255,255,0.01);
 }
@@ -1228,7 +811,6 @@ body.dark-mode .filter-options label {
 .filter-group-header.active + .filter-options {
   display: flex !important;
 }
-/* Fix: Make filter options (checkboxes) stack vertically, align left, and add spacing for clarity */
 .filter-options {
   flex-direction: column !important;
   align-items: flex-start;
@@ -1251,8 +833,6 @@ body.dark-mode .filter-options label {
 .filter-options input[type="checkbox"] {
   margin-right: 0.5em;
 }
-
-/* Only #444 in light mode, #f3f3f3 in dark mode for Select All | Clear All and divider, no other color or line */
 .filter-group-actions a,
 .filter-action-divider {
   color: #444 !important;
@@ -1274,24 +854,19 @@ body.dark-mode .filter-group-actions a:focus {
 .filter-action-divider {
   margin: 0 0.25em;
 }
-
-/* --- Remove unwanted space at bottom of page and footer --- */
 html, body {
   height: 100%;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
 }
-
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-
 main {
   flex: 1 0 auto;
 }
-
 footer {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
@@ -1302,8 +877,6 @@ footer {
   margin-bottom: 0.5em !important;
   padding-bottom: 0 !important;
 }
-
-/* === Minimal Footer === */
 .site-footer {
   width: 100%;
   background: #f7f7f7;
@@ -1355,32 +928,6 @@ footer {
   vertical-align: middle;
   display: inline-block;
 }
-@media (max-width: 700px) {
-  .site-footer .footer-main {
-    font-size: 0.8em;
-    gap: 0.2em;
-    margin-left: 0em;
-  }
-  .site-footer .footer-line2 {
-    gap: 0.18em;
-    font-size: 0.7em;
-    margin-bottom: 0.2em;
-  }
-  .site-footer .footer-insta-link {
-    margin-left: 0.2em;
-    font-size: 0.8em;
-  }
-  .site-footer .footer-line1 {
-    font-size: 0.7em;
-    max-width: 100vw;
-    width: 100vw;
-    display: block;
-    margin-left: 0em;
-    margin-right: 0em;
-    box-sizing: border-box;
-    word-break: break-word;
-  }
-}
 body.dark-mode .site-footer {
   background: #232323;
   color: #f3f3f3;
@@ -1399,85 +946,33 @@ body.dark-mode .site-footer .footer-insta-icon {
   border-radius: 0.3em;
   box-shadow: 0 0 0.5em #0002;
 }
-
 body.dark-mode .about-us-carousel {
   background: #232323;
   color: #f3f3f3;
   border: 2px solid #4ec3fa;
 }
-
 body.dark-mode .about-us-carousel h2 {
   color: #f3f3f3;
 }
-
 body.dark-mode .carousel-content.improved-content {
   background: #1E1E1E;
   color: #f3f3f3;
 }
-
 body.dark-mode .carousel-content.improved-content h3,
 body.dark-mode .carousel-content.improved-content .subtitle {
   color: #8be18b;
 }
-
 body.dark-mode .carousel-content.improved-content p {
   color: #f3f3f3;
 }
-
 body.dark-mode .carousel-arrow {
   background: #181818;
   color: #fff;
   border: 2px solid #4ec3fa;
 }
-
 .about-us-carousel {
   overflow: hidden;
 }
-@media (max-width: 700px) {
-  .about-us-carousel {
-    min-height: 600px; /* Remove fixed min-height so it doesn't push down other sections */
-    transition: none;
-  }
-  .about-us-carousel .carousel-slide {
-    min-height: 550px;
-    max-height: 600px; /* Only the slide reserves space for tallest card */
-    transition: min-height 0.4s cubic-bezier(0.4,0.2,0.2,1);
-  }
-  .about-us-carousel h2 {
-    margin-top: 0rem !important;
-    margin-bottom: 0rem !important;
-  }
-}
-
-@media (max-width: 700px) {
-  .about-us-carousel .carousel-content.improved-content .button {
-    font-size: 0.85rem;
-    width: 110px;
-    max-width: 110px;
-    padding: 0.4rem 0.1rem;
-    margin: 0.7rem auto 0 auto;
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    letter-spacing: 0.01em;
-  }
-  .about-us-carousel .carousel-image.improved-green-bg {
-    width: 40vw;
-    max-width: 130px;
-    height: auto;
-    aspect-ratio: 1/1;
-    margin: 0.7rem auto 0.3rem auto;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  }
-  .about-us-carousel .carousel-image.improved-green-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-/* === Review Carousel Section === */
 .review-carousel {
   position: relative;
   width: 100%;
@@ -1559,16 +1054,6 @@ body.dark-mode .carousel-arrow {
   background: linear-gradient(to top, #fafafa 60%, rgba(250,250,250,0.01) 100%);
   filter: blur(1px);
 }
-@media (max-width: 700px) {
-  .review-carousel-viewport {
-    height: 450px;
-  }
-  .review-carousel-list .review-item {
-    font-size: 0.92rem;
-    padding: 0.5em 0.7em;
-    margin: 0.4rem 0.5rem 0.4rem 0.5rem;
-  }
-}
 body.dark-mode .review-carousel-list .review-item {
   background: #232323;
   color: #f3f3f3;
@@ -1586,8 +1071,6 @@ body.dark-mode .review-blur-top, body.dark-mode .review-blur-bottom {
 body.dark-mode .review-blur-bottom {
   background: linear-gradient(to top, #232323 60%, rgba(35,35,35,0.01) 100%);
 }
-
-/* === Review Carousel Title === */
 .review-carousel-title {
   font-family: 'Roboto Mono', monospace;
   font-size: 1.5rem;
@@ -1596,17 +1079,9 @@ body.dark-mode .review-blur-bottom {
   text-align: center;
   color: #444;
 }
-@media (max-width: 700px) {
-  .review-carousel-title {
-    font-size: 1.1rem;
-    margin-bottom: 0.3rem;
-  }
-}
 body.dark-mode .review-carousel-title {
   color: #f3f3f3;
 }
-
-/* === Review Form Spacing === */
 .review-form {
   margin-bottom: 0.8rem !important;
 }
@@ -1614,8 +1089,6 @@ body.dark-mode .review-carousel-title {
   margin-top: 0 !important;
   margin-bottom: 0.3rem;
 }
-
-/* === Boutique Section Headings: Use Dancing Script for all major section titles === */
 .saree-collection h2,
 .top-customers h2,
 .reviews h2,
@@ -1630,42 +1103,24 @@ body.dark-mode .review-carousel-title {
   margin-bottom: 0.5rem;
   color: #444;
 }
-
-@media (max-width: 700px) {
-  .saree-collection h2,
-  .top-customers h2,
-  .reviews h2,
-  .review-carousel-title,
-  .contact-us h2,
-  .about-us-carousel h2 {
-    font-size: 1.5rem !important;
-  }
-}
-
 body.dark-mode .saree-collection h2,
 body.dark-mode .top-customers h2,
 body.dark-mode .reviews h2,
 body.dark-mode .contact-us h2 {
   color: #f3f3f3 !important;
 }
-
-/* === About Us Carousel Name Color (Light & Dark Mode) */
 .about-us-carousel .carousel-content.improved-content h3 {
   color: #B6862C !important;
 }
 body.dark-mode .about-us-carousel .carousel-content.improved-content h3 {
   color: #e0c97f !important;
 }
-
-/* About Us Carousel Subtitle Color (Light & Dark Mode) */
 .about-us-carousel .carousel-content.improved-content .subtitle {
   color: #d4b06a !important;
 }
 body.dark-mode .about-us-carousel .carousel-content.improved-content .subtitle {
   color: #f7e7b3 !important;
 }
-
-/* === About Us Carousel Name & Subtitle Font Fix === */
 .carousel-content.improved-content h3 {
   font-family: 'Cormorant Garamond', serif !important;
   font-style: italic !important;
@@ -1676,9 +1131,6 @@ body.dark-mode .about-us-carousel .carousel-content.improved-content .subtitle {
   font-weight: 400;
   font-style: normal;
 }
-/* === End About Us Carousel Name & Subtitle Font Fix === */
-
-/* === Card Hover Effects for About Us Carousel === */
 .carousel-box.improved-box {
   scale: 0.8;
   width: auto;
@@ -1687,11 +1139,7 @@ body.dark-mode .about-us-carousel .carousel-content.improved-content .subtitle {
   border-radius: 0;
   margin: 0 auto;
   padding: 0;
-  /* Remove extra border and shadow if inside .about-us-carousel */
-  border: none;
-  box-shadow: none;
 }
-
 .carousel-card-scale {
   transform: scale(1); /* Default scale */
   display: flex;
@@ -1709,25 +1157,11 @@ body.dark-mode .about-us-carousel .carousel-content.improved-content .subtitle {
   z-index: 3;
   box-shadow: 0 4px 16px rgba(250, 196, 2, 0.285);
 }
-@media (max-width: 700px) {
-  .carousel-card-scale {
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100vw;
-    max-width: 100vw;
-    min-width: 0;
-    height: auto;
-  }
-}
-
 body.dark-mode .carousel-box.improved-box {
   background: #232323 !important;
   border: none;
   box-shadow: 0 6px 32px rgba(0,0,0,0.18);
 }
-
-/* Logo box above header content */
 .logo-box {
   position: absolute;
   left: 49.5%;
@@ -1747,30 +1181,12 @@ body.dark-mode .carousel-box.improved-box {
     drop-shadow(1px -1px 0 #444)
     drop-shadow(-1px 1px 0 #444)
     drop-shadow(1px 1px 0 #444); /* #444 outline */
-
-
   width: 400px;
   height: 400px;
   object-fit: contain;
   background: transparent;
   display: block;
 }
-
-/* Mobile: adjust logo-box position and size */
-@media (max-width: 700px) {
-  .logo-box {
-    top: 12px;
-    width: 60px;
-    height: 60px;
-    border-width: 2px;
-  }
-  .logo-img {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-/* === Centered Numbered Contact Buttons === */
 .numbered-contact-buttons {
     position: absolute;
   left: 45.2%;
@@ -1798,7 +1214,6 @@ body.dark-mode .carousel-box.improved-box {
 .numbered-contact-btn:focus img {
   transform: scale(1.08);
 }
-/* Phone Button */
 .numbered-contact-btn:nth-child(1):hover img,
 .numbered-contact-btn:nth-child(1):focus img {
   filter:
@@ -1807,7 +1222,6 @@ body.dark-mode .carousel-box.improved-box {
     drop-shadow(-0.5px 0.5px 0 #007AFF)
     drop-shadow(0.5px 0.5px 0 #1C1C1E);
 }
-/* WhatsApp Button */
 .numbered-contact-btn:nth-child(2):hover img,
 .numbered-contact-btn:nth-child(2):focus img {
   filter:
@@ -1816,7 +1230,6 @@ body.dark-mode .carousel-box.improved-box {
     drop-shadow(-0.5px 0.5px 0 #507a31)
     drop-shadow(0.5px 0.5px 0 #153d01);
 }
-/* Instagram Button */
 .numbered-contact-btn:nth-child(3):hover img,
 .numbered-contact-btn:nth-child(3):focus img {
   filter:
@@ -1825,9 +1238,384 @@ body.dark-mode .carousel-box.improved-box {
     drop-shadow(-0.5px 0.5px 0 #833AB4)
     drop-shadow(0.5px 0.5px 0 #f502f5);
 }
+.filter-options {
+  gap: 0em;
+}
 
-/* Mobile: adjust numbered contact buttons position */
+/* Mobile Styles */
+
 @media (max-width: 700px) {
+  /* Header (mobile) */
+  .about-us h2,
+  .about-us-carousel h2,
+  .saree-collection h2,
+  .contact-us h2,
+  .reviews h2,
+  .review-list h3,
+  .top-customers h2 {
+    font-size: 1.2rem !important;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    margin-bottom: 1rem !important;
+    text-align: center;
+  }
+
+  /* Top Customers Section (mobile) */
+  .top-customers {
+    padding: 1.2rem 0.2rem;
+  }
+  .customer-card p, 
+  .customer-card .card-text, 
+  .carousel-content.improved-content p {
+    text-align: justify !important;
+  }
+  .customer-stack .customer-card {
+    display: none;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .customer-stack.active .customer-card.active {
+    display: block;
+  }
+
+  /* Contact Us Section (mobile) */
+  .contact-us {
+    padding: 1.2rem 0.9rem !important;
+  }
+  .contact-us form {
+    padding: 1.2rem 0rem !important;
+    max-width: 95%;
+  }
+
+  /* Reviews Section (mobile) */
+  .reviews {
+    padding: 0.5rem 0.9rem !important;
+  }
+  .review-form {
+    padding: 0.5rem 0rem !important;
+    max-width: 95%;
+  }
+
+  /* Gallery (mobile) */
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
+    padding: 0.3rem;
+    width: 109%;
+  }
+  .gallery img {
+    border-radius: 1px;
+    margin: 0;
+  }
+
+  /* Carousel (mobile) */
+  .carousel-arrow {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+    font-size: 1.2em;
+  }
+  .about-us-carousel .carousel-arrow.left,
+  .about-us-carousel .carousel-arrow.right {
+    top: 15%;
+    transform: translateY(-50%);
+  }
+  .carousel-content.improved-content .button {
+    font-size: 0.7rem;
+    width: 70px;
+    padding: 0.2rem 0.1rem;
+    margin-top: 0.8rem;
+  }
+  .carousel-content.improved-content {
+    border-radius: 0 0 18px 18px;
+    text-align: center;
+    align-items: center;
+    padding: 1.2rem 0.5rem;
+    height: auto;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .carousel-content.improved-content h3 {
+    font-size: 1rem;
+  }
+  .carousel-content.improved-content .subtitle {
+    font-size: 0.9rem;
+  }
+  .carousel-content.improved-content p {
+    font-size: 0.82rem;
+    line-height: 1.2;
+    max-height: 8em;
+    text-align: justify;
+  }
+  .carousel-content.improved-content .button {
+    font-size: 0.9rem;
+    width: 120px;
+    padding: 0.5rem 0.3rem;
+  }
+  .carousel-box.improved-box {
+    background: #fafafa;
+  }
+  body.dark-mode .carousel-box.improved-box {
+    background: #232323 !important;
+  }
+  .carousel-slide {
+    flex-direction: column;
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .carousel-box.improved-box {
+    scale: 0.95 !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 0;
+    width: 100vw;
+    max-width: 100vw;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 0 0 1.2rem 0;
+    background: #fafafa;
+  }
+  .carousel-img-col {
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  .carousel-image.improved-green-bg {
+    width: 60vw;
+    max-width: 200px;
+    height: auto;
+    aspect-ratio: 1/1;
+    margin: 1.2rem auto 0.5rem auto;
+    border-radius: 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .carousel-image.improved-green-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+    margin: 0 auto;
+  }
+  .carousel-content.improved-content {
+    width: 98vw;
+    max-width: 98vw;
+    min-width: 0;
+    border-radius: 0;
+    padding: 1.1rem 0.7rem 0.7rem 0.7rem;
+    margin: 0 auto;
+    background: #fff;
+    color: #222;
+    box-shadow: none;
+    align-items: center;
+    text-align: center;
+  }
+  .carousel-content.improved-content p {
+    font-size: 0.92rem;
+    margin-bottom: 0.7rem;
+    text-align: justify;
+    line-height: 1.35;
+    color: #222;
+  }
+  .carousel-content.improved-content .button {
+    font-size: 1rem;
+    width: 80vw;
+    max-width: 220px;
+    margin: 1.1rem auto 0 auto;
+    padding: 0.7rem 0.2rem;
+    display: block;
+    background: linear-gradient(90deg, #A3D9EC 0%, #7EC8E3 100%);
+    color: #232323;
+  }
+  .carousel-indicators {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    gap: 0.5rem;
+  }
+  .carousel-dot {
+    width: 12px;
+    height: 12px;
+  }
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 38px;
+    height: 38px;
+    font-size: 1.5rem;
+    background: #22304a;
+    left: 8px;
+    right: auto;
+  }
+  .carousel-arrow.right {
+    left: auto;
+    right: 8px;
+  }
+  body.dark-mode .carousel-content.improved-content {
+    background: #232323 !important;
+    color: #f3f3f3 !important;
+  }
+  body.dark-mode .carousel-content.improved-content h3 {
+    color: #8be18b !important;
+  }
+  body.dark-mode .carousel-content.improved-content .subtitle {
+    color: #b6eeb6 !important;
+  }
+  body.dark-mode .carousel-content.improved-content p {
+    color: #f3f3f3 !important;
+    text-align: justify;
+  }
+  .about-us-carousel .carousel-container.improved-carousel {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-us-carousel .carousel-arrow.left {
+    position: absolute;
+    left: 5vw;
+    top: 15%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  .about-us-carousel .carousel-arrow.right {
+    position: absolute;
+    right: 5vw;
+    top: 15%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  .about-us-carousel .carousel-slide {
+    margin-bottom: 0;
+  }
+
+  /* Footer (mobile) */
+  .site-footer .footer-main {
+    font-size: 0.8em;
+    gap: 0.2em;
+    margin-left: 0em;
+  }
+  .site-footer .footer-line2 {
+    gap: 0.18em;
+    font-size: 0.7em;
+    margin-bottom: 0.2em;
+  }
+  .site-footer .footer-insta-link {
+    margin-left: 0.2em;
+    font-size: 0.8em;
+  }
+  .site-footer .footer-line1 {
+    font-size: 0.7em;
+    max-width: 100vw;
+    width: 100vw;
+    display: block;
+    margin-left: 0em;
+    margin-right: 0em;
+    box-sizing: border-box;
+    word-break: break-word;
+  }
+
+  /* About Us Carousel (mobile) */
+  .about-us-carousel {
+    min-height: 600px;
+    transition: none;
+  }
+  .about-us-carousel .carousel-slide {
+    min-height: 550px;
+    max-height: 600px;
+    transition: min-height 0.4s cubic-bezier(0.4,0.2,0.2,1);
+  }
+  .about-us-carousel h2 {
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
+  .about-us-carousel .carousel-content.improved-content .button {
+    font-size: 0.85rem;
+    width: 110px;
+    max-width: 110px;
+    padding: 0.4rem 0.1rem;
+    margin: 0.7rem auto 0 auto;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 0.01em;
+  }
+  .about-us-carousel .carousel-image.improved-green-bg {
+    width: 40vw;
+    max-width: 130px;
+    height: auto;
+    aspect-ratio: 1/1;
+    margin: 0.7rem auto 0.3rem auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  }
+  .about-us-carousel .carousel-image.improved-green-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Review Carousel (mobile) */
+  .review-carousel-viewport {
+    height: 450px;
+  }
+  .review-carousel-list .review-item {
+    font-size: 0.92rem;
+    padding: 0.5em 0.7em;
+    margin: 0.4rem 0.5rem 0.4rem 0.5rem;
+  }
+  .review-carousel-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Section Headings (mobile) */
+  .saree-collection h2,
+  .top-customers h2,
+  .reviews h2,
+  .review-carousel-title,
+  .contact-us h2,
+  .about-us-carousel h2 {
+    font-size: 1.5rem !important;
+  }
+
+  /* Carousel Card Scale (mobile) */
+  .carousel-card-scale {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    height: auto;
+  }
+
+  /* Logo and Contact Buttons (mobile) */
+  .logo-box {
+    top: 12px;
+    width: 60px;
+    height: 60px;
+    border-width: 2px;
+  }
+  .logo-img {
+    width: 200px;
+    height: 200px;
+  }
   .numbered-contact-buttons {
     left: 35%;
     gap: 10px;
@@ -1837,15 +1625,31 @@ body.dark-mode .carousel-box.improved-box {
     height: 30px;
     width: 30px;
   }
-}
 
-/* Reduce vertical gap between filter options inside filter groups */
-.filter-options {
-  gap: 0em;
-}
+  /* Reviews List (mobile) */
+  .reviews {
+    padding: 1.2rem 0.9rem !important;
+    max-width: 95vw;
+  }
+  .reviews h2,
+  .review-list h3 {
+    font-size: 1.2rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .review-list {
+    margin-top: 1.2rem;
+    padding: 0;
+  }
+  .review-list li {
+    font-size: 0.92rem;
+    border-radius: 1px;
+    margin-bottom: 0.7em;
+    padding: 0.5em 0.7em;
+    text-align: justify !important;
+    line-height: 1.35 !important;
+  }
 
-/* Increase the width of the filter button to 100% on mobile (max-width: 700px) for better usability */
-@media (max-width: 700px) {
+  /* Filter Button (mobile) */
   .filter-btn {
     max-width: 100%;
     width: 25%;
@@ -1854,4 +1658,71 @@ body.dark-mode .carousel-box.improved-box {
     padding: 0.2rem 0.5rem;
     margin-bottom: 0.5rem;
   }
+}
+@media (max-width: 768px) {
+  .about-us h2,
+  .saree-collection h2,
+  .contact-us h2,
+  .reviews h2,
+  .review-list h3 { font-size: 1.2rem; }
+  header { padding: 4.5rem 2rem; }
+  .header-content { flex-direction: column; gap: 10px; }
+  .header-image { max-width: 120px; }
+  header h1 { font-size: 1.79rem; }
+  .byline-desktop { font-size: 1rem;margin-top: 0.4rem; }
+  .left-image { max-width: 100px; }
+  .right-image { max-width: 93px; }
+  .about-content { flex-direction: column; text-align: center; }
+  .about-content img { max-width: 50%; }
+  .about-text { text-align: justify; }
+  .about-text h3 { font-size: 1.2rem; text-align: center; }
+  .about-text p { text-align: center; }
+  .about-text .justified-text { text-align: justify; }
+  .contact-us form, .review-form { padding: 0 1rem; }
+  .gallery { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0.5rem; padding: 0; }
+  .gallery img { border-radius: 1px; }
+}
+@media (max-width: 900px) {
+  .carousel-content.improved-content .button {
+    font-size: 0.75rem;
+    width: 80px;
+    padding: 0.3rem 0.1rem;
+    margin-top: 1rem;
+  }
+  .carousel-content.improved-content {
+    padding: 0 0.7rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .carousel-content.improved-content h3 {
+    font-size: 1.1rem;
+  }
+  .carousel-content.improved-content .subtitle {
+    font-size: 0.95rem;
+  }
+  .carousel-content.improved-content p {
+    font-size: 0.88rem;
+    line-height: 1.3;
+    text-align: justify;
+  }
+  .carousel-content.improved-content .button {
+    font-size: 0.95rem;
+    width: 140px;
+    padding: 0.6rem 0.5rem;
+  }
+}
+@media (max-width: 1023px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* fallback for tablets and below */
+  }
+}
+.filter-group-header:focus,
+.filter-group-toggle:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+.filter-group-header,
+.filter-group-toggle {
+  border-radius: 0 !important;
 }

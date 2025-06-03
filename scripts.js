@@ -1,5 +1,4 @@
-// =================== LIGHT/DARK MODE TOGGLE SECTION ===================
-// Light/Dark mode toggle logic
+// Theme Toggle Section
 const btn = document.getElementById('toggleModeBtn');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const savedMode = localStorage.getItem('themeMode');
@@ -12,58 +11,112 @@ btn.addEventListener('click', () => {
   const isDark = document.body.classList.contains('dark-mode');
   btn.textContent = isDark ? '☀️' : '🌙';
   localStorage.setItem('themeMode', isDark ? 'dark' : 'light');
-  btn.blur(); // Remove focus after click
+  btn.blur();
 });
-// =================== END LIGHT/DARK MODE TOGGLE SECTION ===================
 
-// =================== LIGHTBOX GALLERY SECTION ===================
-// Lightbox gallery logic
-document.addEventListener("DOMContentLoaded", () => {
-  const galleryImages = document.querySelectorAll(".gallery img");
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImage = document.getElementById("lightbox-image");
-
-  if (!lightbox || !lightboxImage) return; // Defensive: only run if lightbox exists
-
-  // Open lightbox
-  galleryImages.forEach((img) => {
-    img.addEventListener("click", () => {
-      const originalUrl = img.getAttribute("data-original"); // Get the original URL
-      lightboxImage.src = originalUrl; // Set the lightbox image to the original URL
-      lightbox.classList.remove("hidden");
-      document.body.classList.add("lightbox-active");
+// DOMContentLoaded: Gallery, Lightbox, Filter Dropdown/Accordion
+document.addEventListener('DOMContentLoaded', () => {
+  // Gallery & Lightbox Section
+  const galleryImages = document.querySelectorAll('.gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+  if (lightbox && lightboxImage) {
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        const originalUrl = img.getAttribute('data-original');
+        lightboxImage.src = originalUrl;
+        lightbox.classList.remove('hidden');
+        document.body.classList.add('lightbox-active');
+      });
     });
-  });
-
-  // Close lightbox when clicking outside the image
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox || e.target === lightboxImage) {
-      lightbox.classList.add("hidden");
-      document.body.classList.remove("lightbox-active");
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox || e.target === lightboxImage) {
+        lightbox.classList.add('hidden');
+        document.body.classList.remove('lightbox-active');
+      }
+    });
+    const closeBtn = document.querySelector('.lightbox-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        lightbox.classList.add('hidden');
+        document.body.classList.remove('lightbox-active');
+      });
     }
-  });
+  }
 
-  // Close lightbox when clicking the close button
-  const closeBtn = document.querySelector('.lightbox-close');
-  if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-      lightbox.classList.add('hidden');
-      document.body.classList.remove('lightbox-active');
+  // Filter Dropdown/Accordion Section
+  const filterAccordion = document.querySelector('.filter-accordion');
+  if (filterAccordion) {
+    document.querySelectorAll('.filter-group').forEach(g => {
+      g.querySelector('.filter-group-toggle').setAttribute('aria-expanded', 'false');
+      g.querySelector('.filter-group-icon').textContent = '+';
+      g.querySelector('.filter-options').setAttribute('hidden', '');
+      g.querySelector('.filter-group-header').classList.remove('active');
+    });
+    filterAccordion.addEventListener('click', function(e) {
+      const target = e.target.closest('button, a');
+      if (!target) return;
+      if (target.classList.contains('filter-group-toggle')) {
+        e.preventDefault();
+        const group = target.closest('.filter-group');
+        const options = group.querySelector('.filter-options');
+        const header = group.querySelector('.filter-group-header');
+        document.querySelectorAll('.filter-group').forEach(g => {
+          if (g !== group) {
+            g.querySelector('.filter-group-toggle').setAttribute('aria-expanded', 'false');
+            g.querySelector('.filter-group-icon').textContent = '+';
+            g.querySelector('.filter-options').setAttribute('hidden', '');
+            g.querySelector('.filter-group-header').classList.remove('active');
+          }
+        });
+        const expanded = target.getAttribute('aria-expanded') === 'true';
+        target.setAttribute('aria-expanded', !expanded);
+        group.querySelector('.filter-group-icon').textContent = expanded ? '+' : '–';
+        if (expanded) {
+          options.setAttribute('hidden', '');
+          header.classList.remove('active');
+        } else {
+          options.removeAttribute('hidden');
+          header.classList.add('active');
+        }
+      }
+      if (target.classList.contains('filter-select-all')) {
+        e.preventDefault();
+        const group = target.closest('.filter-group');
+        group.querySelectorAll('.filter-options input[type="checkbox"]').forEach(cb => cb.checked = true);
+      }
+      if (target.classList.contains('filter-clear-all')) {
+        e.preventDefault();
+        const group = target.closest('.filter-group');
+        group.querySelectorAll('.filter-options input[type="checkbox"]').forEach(cb => cb.checked = false);
+      }
+    });
+  }
+  // Filter Dropdown Toggle Section
+  const filterBtn = document.getElementById('filterDropdownBtn');
+  const filterDropdown = document.getElementById('filterDropdown');
+  if (filterBtn && filterDropdown) {
+    filterBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = filterDropdown.style.display === 'block';
+      filterDropdown.style.display = isOpen ? 'none' : 'block';
+    });
+    document.addEventListener('click', function(e) {
+      if (!filterDropdown.contains(e.target) && !filterBtn.contains(e.target)) {
+        filterDropdown.style.display = 'none';
+      }
     });
   }
 });
-// =================== END LIGHTBOX GALLERY SECTION ===================
 
-// =================== ABOUT US CAROUSEL SECTION ===================
-// About Us Carousel Functionality
+// About Us Carousel Section
 (function() {
   const slides = document.querySelectorAll('.about-us-carousel .carousel-box');
   const prevBtn = document.getElementById('aboutPrev');
   const nextBtn = document.getElementById('aboutNext');
   let current = 0;
   let autoSlideInterval;
-  const SLIDE_INTERVAL = 5000; // 5 seconds for a slower transition
-
+  const SLIDE_INTERVAL = 5000;
   function updateIndicators(idx) {
     const dot0 = document.getElementById('carouselDot0');
     const dot1 = document.getElementById('carouselDot1');
@@ -72,28 +125,24 @@ document.addEventListener("DOMContentLoaded", () => {
       dot1.classList.toggle('active', idx === 1);
     }
   }
-
   function showSlide(idx) {
     slides.forEach((slide, i) => {
       slide.classList.toggle('active', i === idx);
     });
     updateIndicators(idx);
   }
-
   function nextSlide() {
     const prev = current;
     current = (current + 1) % slides.length;
     animateSlide(prev, current, 'next');
     showSlide(current);
   }
-
   function prevSlide() {
     const prev = current;
     current = (current - 1 + slides.length) % slides.length;
     animateSlide(prev, current, 'prev');
     showSlide(current);
   }
-
   prevBtn.addEventListener('click', function() {
     prevSlide();
     resetAutoSlide();
@@ -102,8 +151,6 @@ document.addEventListener("DOMContentLoaded", () => {
     nextSlide();
     resetAutoSlide();
   });
-
-  // Optional: swipe support for mobile
   let startX = null;
   const slideContainer = document.getElementById('aboutCarouselSlides');
   if (slideContainer) {
@@ -118,8 +165,6 @@ document.addEventListener("DOMContentLoaded", () => {
       startX = null;
     });
   }
-
-  // Animation for sliding (slow slide)
   function animateSlide(prevIdx, nextIdx, direction) {
     slides.forEach((slide, i) => {
       slide.classList.remove('slide-in-left', 'slide-in-right', 'slide-out-left', 'slide-out-right');
@@ -130,8 +175,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
-  // Auto slide every 4 seconds
   function startAutoSlide() {
     autoSlideInterval = setInterval(() => {
       nextSlide();
@@ -141,15 +184,12 @@ document.addEventListener("DOMContentLoaded", () => {
     clearInterval(autoSlideInterval);
     startAutoSlide();
   }
-  // Initialize
   showSlide(current);
   startAutoSlide();
   updateIndicators(current);
 })();
-// =================== END ABOUT US CAROUSEL SECTION ===================
 
-// =================== TOP CUSTOMERS CAROUSEL SECTION ===================
-// --- Top Customers Stack Carousel ---
+// Top Customers Carousel Section
 (function() {
   const stacksContainer = document.getElementById('topCustomersStacks');
   const stacks = stacksContainer ? stacksContainer.querySelectorAll('.customer-stack') : [];
@@ -159,16 +199,13 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentStack = 0;
   let currentCard = 0;
   let autoInterval;
-
   function isMobile() {
     return window.innerWidth <= 700;
   }
-
   function updateIndicators() {
     if (!indicators) return;
     indicators.innerHTML = '';
     if (isMobile() && stacks.length) {
-      // Mobile: one dot per card
       const cards = stacks[0].querySelectorAll('.customer-card');
       cards.forEach((_, idx) => {
         const dot = document.createElement('span');
@@ -177,7 +214,6 @@ document.addEventListener("DOMContentLoaded", () => {
         indicators.appendChild(dot);
       });
     } else {
-      // Desktop: one dot per stack
       stacks.forEach((_, idx) => {
         const dot = document.createElement('span');
         dot.className = 'carousel-dot' + (idx === currentStack ? ' active' : '');
@@ -186,7 +222,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
-
   function showStack(idx) {
     stacks.forEach((stack, i) => {
       stack.classList.toggle('active', i === idx);
@@ -194,7 +229,6 @@ document.addEventListener("DOMContentLoaded", () => {
     currentStack = idx;
     updateIndicators();
   }
-
   function showCard(idx) {
     if (!stacks.length) return;
     const cards = stacks[0].querySelectorAll('.customer-card');
@@ -204,7 +238,6 @@ document.addEventListener("DOMContentLoaded", () => {
     currentCard = idx;
     updateIndicators();
   }
-
   function next() {
     if (isMobile()) {
       const cards = stacks[0].querySelectorAll('.customer-card');
@@ -215,7 +248,6 @@ document.addEventListener("DOMContentLoaded", () => {
       showStack(currentStack);
     }
   }
-
   function prev() {
     if (isMobile()) {
       const cards = stacks[0].querySelectorAll('.customer-card');
@@ -226,39 +258,30 @@ document.addEventListener("DOMContentLoaded", () => {
       showStack(currentStack);
     }
   }
-
   function startAuto() {
     clearInterval(autoInterval);
     autoInterval = setInterval(next, 2000);
   }
-
   function handleResize() {
     if (isMobile()) {
-      // Only one stack, show one card at a time
       stacks.forEach((stack, i) => stack.classList.toggle('active', i === 0));
       showCard(currentCard);
     } else {
-      // Show stacks of 3
       stacks.forEach((stack, i) => stack.classList.toggle('active', i === currentStack));
     }
     updateIndicators();
     startAuto();
   }
-
   if (prevBtn) prevBtn.addEventListener('click', () => { prev(); startAuto(); });
   if (nextBtn) nextBtn.addEventListener('click', () => { next(); startAuto(); });
   window.addEventListener('resize', handleResize);
-
-  // Initial setup
   if (stacks.length) {
     handleResize();
     startAuto();
   }
 })();
-// =================== END TOP CUSTOMERS CAROUSEL SECTION ===================
 
-// =================== ORGANIZATION JSON-LD SECTION ===================
-// Inject JSON-LD for Organization
+// Organization JSON-LD Section
 (function() {
   var orgJsonLd = {
     "@context": "https://schema.org",
@@ -267,7 +290,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "url": "https://sandyadesignerboutique.github.io/Store/",
     "logo": "https://i.postimg.cc/PrK4fMtb/goldennn-1.png"
   };
-  // Only inject if not already present
   if (!document.querySelector('script[type="application/ld+json"][data-org-jsonld]')) {
     var script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -276,10 +298,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.head.appendChild(script);
   }
 })();
-// =================== END ORGANIZATION JSON-LD SECTION ===================
 
-// =================== REVIEWS CAROUSEL SECTION ===================
-// === Review Carousel Logic ===
+// Reviews Carousel Section
 (function() {
   const reviews = [
     { name: "Vipula", text: "Customer satisfaction 100 percent" },
@@ -294,23 +314,19 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Navyasree P", text: "Nice stitching...." },
     { name: "Kruthika", text: "Sandhya Boutique offers elegant, handcrafted designs with a personal touch. Perfect for those seeking unique, traditional styles." }
   ];
-
   const carouselList = document.getElementById('reviewCarouselList');
   const upBtn = document.querySelector('.review-arrow.up');
   const downBtn = document.querySelector('.review-arrow.down');
   let current = 0;
   let autoScrollTimer = null;
   let isPaused = false;
-
   function getIndices(center) {
-    // Returns [top, middle, bottom] indices, looping
     const n = reviews.length;
     const mid = center % n;
     const top = (mid - 1 + n) % n;
     const bot = (mid + 1) % n;
     return [top, mid, bot];
   }
-
   function render() {
     const [top, mid, bot] = getIndices(current);
     carouselList.innerHTML = '';
@@ -320,10 +336,8 @@ document.addEventListener("DOMContentLoaded", () => {
       item.innerHTML = `<strong class="reviewer-name">${reviews[idx].name}</strong><p>${reviews[idx].text}</p>`;
       carouselList.appendChild(item);
     });
-    // Animate: slide up/down
     carouselList.style.transform = 'translateY(0)';
   }
-
   function next() {
     current = (current + 1) % reviews.length;
     render();
@@ -332,23 +346,18 @@ document.addEventListener("DOMContentLoaded", () => {
     current = (current - 1 + reviews.length) % reviews.length;
     render();
   }
-
   function autoScroll() {
     if (isPaused) return;
     next();
     autoScrollTimer = setTimeout(autoScroll, 3500);
   }
-
   function pauseAutoScroll() {
     isPaused = true;
     clearTimeout(autoScrollTimer);
     setTimeout(() => { isPaused = false; autoScroll(); }, 9000);
   }
-
   upBtn.addEventListener('click', () => { prev(); pauseAutoScroll(); });
   downBtn.addEventListener('click', () => { next(); pauseAutoScroll(); });
-
-  // Touch/drag support for mobile
   let startY = null;
   carouselList.addEventListener('touchstart', e => { startY = e.touches[0].clientY; });
   carouselList.addEventListener('touchend', e => {
@@ -358,59 +367,6 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (startY - endY > 30) { next(); pauseAutoScroll(); }
     startY = null;
   });
-
   render();
   setTimeout(autoScroll, 3500);
 })();
-// =================== END REVIEWS CAROUSEL SECTION ===================
-
-// =================== FILTER DROPDOWN ACCORDION & SELECT/CLEAR ALL ===================
-document.addEventListener('DOMContentLoaded', function() {
-  // Accordion logic for filter groups
-  const filterGroups = document.querySelectorAll('.filter-group');
-  filterGroups.forEach(group => {
-    const toggleBtn = group.querySelector('.filter-group-toggle');
-    const options = group.querySelector('.filter-options');
-    const header = group.querySelector('.filter-group-header');
-    toggleBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      // Collapse all other groups
-      filterGroups.forEach(g => {
-        if (g !== group) {
-          g.querySelector('.filter-group-toggle').setAttribute('aria-expanded', 'false');
-          g.querySelector('.filter-group-icon').textContent = '+';
-          g.querySelector('.filter-options').setAttribute('hidden', '');
-          g.querySelector('.filter-group-header').classList.remove('active');
-        }
-      });
-      // Toggle this group
-      const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-      toggleBtn.setAttribute('aria-expanded', !expanded);
-      group.querySelector('.filter-group-icon').textContent = expanded ? '+' : '–';
-      if (expanded) {
-        options.setAttribute('hidden', '');
-        header.classList.remove('active');
-      } else {
-        options.removeAttribute('hidden');
-        header.classList.add('active');
-      }
-    });
-  });
-
-  // Select All / Clear All logic
-  document.querySelectorAll('.filter-select-all').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const group = link.closest('.filter-group');
-      group.querySelectorAll('.filter-options input[type="checkbox"]').forEach(cb => cb.checked = true);
-    });
-  });
-  document.querySelectorAll('.filter-clear-all').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const group = link.closest('.filter-group');
-      group.querySelectorAll('.filter-options input[type="checkbox"]').forEach(cb => cb.checked = false);
-    });
-  });
-});
-// =================== END FILTER DROPDOWN ACCORDION & SELECT/CLEAR ALL ===================
