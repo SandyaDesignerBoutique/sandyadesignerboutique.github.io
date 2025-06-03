@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- =================== HEAD SECTION =================== -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sandya Designer Boutique</title>
+  <meta name="description" content="Sandya Designer Boutique – Custom Indian bridal blouses, sarees, lehengas, and maggam work with worldwide shipping.">
+  <meta name="keywords" content="Indian Boutique, Maggam work, Sarees, Lehengas, Blouse design, Designer wear Hyderabad">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Sandya Designer Boutique">
+  <meta property="og:description" content="Custom sarees, bridal maggam work, blouses, lehengas, and more. Tradition meets trend.">
+  <meta property="og:image" content="https://i.postimg.cc/PrK4fMtb/goldennn-1.png">
+  <meta property="og:url" content="https://sandyaDesignerBoutique.github.io/Store/">
+  <meta property="og:site_name" content="Sandya Designer Boutique">
+  <meta name="application-name" content="Sandya Designer Boutique">
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://i.postimg.cc/PrK4fMtb/goldennn-1.png" type="image/png">
+  <link rel="canonical" href="https://sandyadesignerboutique.github.io/Store/">
+</head>
+<!-- =================== END HEAD SECTION =================== -->
+
+<body>
+  <!-- =================== TOGGLE MODE BUTTON =================== -->
+  <button class="toggle-mode-btn" id="toggleModeBtn" aria-label="Toggle light/dark mode">🌙</button>
+  <!-- =================== END TOGGLE MODE BUTTON =================== -->
+
+  <!-- =================== HEADER SECTION =================== -->
+  <header>
+    <div class="logo-box">
+      <img src="https://i.postimg.cc/s1FM7zTD/top-head-removebg-preview.png" alt="Boutique Logo" class="logo-img" />
+    </div>
+    <div class="header-content">
+      <img src="https://i.postimg.cc/BvvZxHj3/left.png" alt="Lehenga Left" class="header-image left-image">
+      <h1>Sandya Designer Boutique</h1>
+      <img src="https://i.postimg.cc/gcXLZFhJ/right1.png" alt="Lehenga Right" class="header-image right-image">
+    </div>
+    <span class="byline-desktop">By Sandhya Rani Mangalampally</span>
+    <div class="numbered-contact-buttons">
+      <a href="tel:+919246825329" class="numbered-contact-btn" aria-label="Call Sandya Designer Boutique">
+        <img src="https://i.postimg.cc/L507mzzG/IMG-5905.png" alt="Call" />
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=919246825329&text=Hey%20there!%20" class="numbered-contact-btn" target="_blank" rel="noopener" aria-label="WhatsApp Sandya Designer Boutique">
+        <img src="https://i.postimg.cc/448jvTrw/IMG-5906.png" alt="WhatsApp" />
+      </a>
+      <a href="https://www.instagram.com/sandyadesignerboutique/" class="numbered-contact-btn" target="_blank" rel="noopener" aria-label="Instagram Sandya Designer Boutique">
+        <img src="https://i.postimg.cc/qq7SfmC8/IMG-5907.png" alt="Instagram" />
+      </a>
+    </div>
+  </header>
+  <!-- =================== END HEADER SECTION =================== -->
+
+  <main>
+    <!-- =================== SAREE COLLECTION SECTION =================== -->
+    <section class="saree-collection">
+      <h2>Our Saree Collection</h2>
+      <div class="filter-btn-row">
+        <button class="button filter-btn" type="button" aria-label="Filter Saree Collection" id="filterDropdownBtn">
+          Filter <span class="filter-arrow">&#9660;</span>
+        </button>
+        <div class="filter-dropdown" id="filterDropdown" role="dialog" aria-modal="true" aria-label="Filter Saree Collection">
+            <div class="filter-accordion">
+              <!-- Type / Occasion -->
+              <div class="filter-group" data-group="type">
+                <div class="filter-group-header">
+                  <button class="filter-group-toggle" aria-expanded="true" aria-controls="filter-type-options" tabindex="0">
+                    <span class="filter-group-icon">–</span>
+                    <span class="filter-group-title">Type / Occasion</span>
+                  </button>
+                  <span class="filter-group-actions">
+                    <a href="#" class="filter-select-all" tabindex="0">Select All</a>
+                    <span class="filter-action-divider">|</span>
+                    <a href="#" class="filter-clear-all" tabindex="0">Clear All</a>
+                  </span>
+                </div>
+                <div class="filter-options" id="filter-type-options">
+                  <label><input type="checkbox" value="Bridal" class="filter-type"> Bridal</label>
+                  <label><input type="checkbox" value="Festive" class="filter-type"> Festive</label>
+                  <label><input type="checkbox" value="Party Wear" class="filter-type"> Party Wear</label>
+                  <label><input type="checkbox" value="Casual" class="filter-type"> Casual</label>
+                  <label><input type="checkbox" value="Office Wear" class="filter-type"> Office Wear</label>
+                  <label><input type="checkbox" value="Haldi / Mehndi" class="filter-type"> Haldi / Mehndi</label>
+                </div>
+              </div>
+              <!-- Color -->
+              <div class="filter-group" data-group="color">
+                <div class="filter-group-header">
+                  <button class="filter-group-toggle" aria-expanded="false" aria-controls="filter-color-options" tabindex="0">
+                    <span class="filter-group-icon">+</span>
+                    <span class="filter-group-title">Color</span>
+                  </button>
+                  <span class="filter-group-actions">
+                    <a href="#" class="filter-select-all" tabindex="0">Select All</a>
+                    <span class="filter-action-divider">|</span>
+                    <a href="#" class="filter-clear-all" tabindex="0">Clear All</a>
+                  </span>
+                </div>
+                <div class="filter-options" id="filter-color-options" hidden>
+                  <label><input type="checkbox" value="Red" class="filter-color"> Red</label>
+                  <label><input type="checkbox" value="Green" class="filter-color"> Green</label>
+                  <label><input type="checkbox" value="Blue" class="filter-color"> Blue</label>
+                  <label><input type="checkbox" value="Yellow" class="filter-color"> Yellow</label>
+                  <label><input type="checkbox" value="Pink" class="filter-color"> Pink</label>
+                  <label><input type="checkbox" value="Black" class="filter-color"> Black</label>
+                  <label><input type="checkbox" value="White / Off-white" class="filter-color"> White / Off-white</label>
+                  <label><input type="checkbox" value="Multicolor" class="filter-color"> Multicolor</label>
+                </div>
+              </div>
+              <!-- Fabric -->
+              <div class="filter-group" data-group="fabric">
+                <div class="filter-group-header">
+                  <button class="filter-group-toggle" aria-expanded="false" aria-controls="filter-fabric-options" tabindex="0">
+                    <span class="filter-group-icon">+</span>
+                    <span class="filter-group-title">Fabric</span>
+                  </button>
+                  <span class="filter-group-actions">
+                    <a href="#" class="filter-select-all" tabindex="0">Select All</a>
+                    <span class="filter-action-divider">|</span>
+                    <a href="#" class="filter-clear-all" tabindex="0">Clear All</a>
+                  </span>
+                </div>
+                <div class="filter-options" id="filter-fabric-options" hidden>
+                  <label><input type="checkbox" value="Silk" class="filter-fabric"> Silk</label>
+                  <label><input type="checkbox" value="Cotton" class="filter-fabric"> Cotton</label>
+                  <label><input type="checkbox" value="Georgette" class="filter-fabric"> Georgette</label>
+                  <label><input type="checkbox" value="Chiffon" class="filter-fabric"> Chiffon</label>
+                  <label><input type="checkbox" value="Organza" class="filter-fabric"> Organza</label>
+                  <label><input type="checkbox" value="Net" class="filter-fabric"> Net</label>
+                </div>
+              </div>
+              <!-- Work / Design -->
+              <div class="filter-group" data-group="work">
+                <div class="filter-group-header">
+                  <button class="filter-group-toggle" aria-expanded="false" aria-controls="filter-work-options" tabindex="0">
+                    <span class="filter-group-icon">+</span>
+                    <span class="filter-group-title">Work / Design</span>
+                  </button>
+                  <span class="filter-group-actions">
+                    <a href="#" class="filter-select-all" tabindex="0">Select All</a>
+                    <span class="filter-action-divider">|</span>
+                    <a href="#" class="filter-clear-all" tabindex="0">Clear All</a>
+                  </span>
+                </div>
+                <div class="filter-options" id="filter-work-options" hidden>
+                  <label><input type="checkbox" value="Zari" class="filter-work"> Zari</label>
+                  <label><input type="checkbox" value="Embroidery" class="filter-work"> Embroidery</label>
+                  <label><input type="checkbox" value="Printed" class="filter-work"> Printed</label>
+                  <label><input type="checkbox" value="Maggam" class="filter-work"> Maggam</label>
+                  <label><input type="checkbox" value="Mirror" class="filter-work"> Mirror</label>
+                </div>
+              </div>
+              <!-- Price Range -->
+              <div class="filter-group" data-group="price">
+                <div class="filter-group-header">
+                  <button class="filter-group-toggle" aria-expanded="false" aria-controls="filter-price-options" tabindex="0">
+                    <span class="filter-group-icon">+</span>
+                    <span class="filter-group-title">Price Range</span>
+                  </button>
+                  <span class="filter-group-actions">
+                    <a href="#" class="filter-select-all" tabindex="0">Select All</a>
+                    <span class="filter-action-divider">|</span>
+                    <a href="#" class="filter-clear-all" tabindex="0">Clear All</a>
+                  </span>
+                </div>
+                <div class="filter-options" id="filter-price-options" hidden>
+                  <label><input type="checkbox" value="Below 1000" class="filter-price"> Below Rs.1000</label>
+                  <label><input type="checkbox" value="1000-2000" class="filter-price"> Rs.1000-2000</label>
+                  <label><input type="checkbox" value="2000-3000" class="filter-price"> Rs.2000-3000</label>
+                  <label><input type="checkbox" value="3000-5000" class="filter-price"> Rs.3000-5000</label>
+                  <label><input type="checkbox" value="5000+" class="filter-price"> Rs.5000+</label>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="gallery">
+        <img src="https://i.postimg.cc/qvjp0j7H/PHOTO-2025-05-12-10-47-25.jpg" data-original="https://i.postimg.cc/kgTRtjZs/PHOTO-2025-05-12-10-47-25.jpg" alt="Saree 1">
+        <img src="https://i.postimg.cc/W4zT4gDF/PHOTO-2025-05-12-10-47-26-1.jpg" data-original="https://i.postimg.cc/Bb5XZNHx/PHOTO-2025-05-12-10-47-26.jpg" alt="Saree 2">
+        <img src="https://i.postimg.cc/fbPZSyXH/PHOTO-2025-05-12-10-47-26-2.jpg" data-original="https://i.postimg.cc/85679TCX/PHOTO-2025-05-12-10-47-26-1.jpg" alt="Saree 3">
+        <img src="https://i.postimg.cc/T1VXscsS/PHOTO-2025-05-12-10-47-27-2.jpg" data-original="https://i.postimg.cc/YqkvDKB8/PHOTO-2025-05-12-10-47-27-2.jpg" alt="Saree 4">
+        <img src="https://i.postimg.cc/pXvvFght/PHOTO-2025-05-12-10-47-27.jpg" data-original="https://i.postimg.cc/qMLz9bkr/PHOTO-2025-05-12-10-47-27.jpg" alt="Saree 5">
+        <img src="https://i.postimg.cc/2yRDTt0h/PHOTO-2025-05-12-10-47-26.jpg" data-original="https://i.postimg.cc/rwVts6hz/tmp-D3-PHOTO-2025-05-12-10-47-26.jpg" alt="Saree 6">
+        <img src="https://i.postimg.cc/sXZzYz43/PHOTO-2025-05-12-10-47-26-1-1.jpg" data-original="https://i.postimg.cc/gjbxP1Xz/PHOTO-2025-05-12-10-47-26-2.jpg" alt="Saree 7">
+        <img src="https://i.postimg.cc/FF3m19KZ/PHOTO-2025-05-12-10-47-27-1.jpg" data-original="https://i.postimg.cc/Df1WcfH8/PHOTO-2025-05-12-10-47-27-1.jpg" alt="Saree 8">
+        <img src="https://i.postimg.cc/25gR8JRM/PHOTO-2025-05-12-10-47-28.jpg" data-original="https://i.postimg.cc/QddHsQtT/PHOTO-2025-05-12-10-47-28.jpg" alt="Saree 9">
+        <img src="https://i.postimg.cc/15KQcJwV/PHOTO-2025-05-12-10-47-28-1.jpg" data-original="https://i.postimg.cc/YSJ91Tx6/PHOTO-2025-05-12-10-47-28-1.jpg" alt="Saree 10">
+        <img src="https://i.postimg.cc/52NMPLS7/PHOTO-2025-05-12-10-47-28-2.jpg" data-original="https://i.postimg.cc/1zgXVyDR/PHOTO-2025-05-12-10-47-28-2.jpg" alt="Saree 11">
+        <img src="https://i.postimg.cc/x1xVB8s0/PHOTO-2025-05-12-10-47-28-3.jpg" data-original="https://i.postimg.cc/9fzRPdHh/tmp32-PHOTO-2025-05-12-10-47-28.jpg" alt="Saree 12">
+        <img src="https://i.postimg.cc/hGXRnnwV/PHOTO-2025-05-12-10-47-28-4.jpg" data-original="https://i.postimg.cc/QddHsQtT/PHOTO-2025-05-12-10-47-28.jpg" alt="Saree 13">
+        <img src="https://i.postimg.cc/yxXwj8gC/PHOTO-2025-05-12-10-47-29.jpg" data-original="https://i.postimg.cc/yxK8G9tW/PHOTO-2025-05-12-10-47-29.jpg" alt="Saree 14">
+        <img src="https://i.postimg.cc/nz78sknz/PHOTO-2025-05-12-10-47-29-1.jpg" data-original="https://i.postimg.cc/fRqkbVtg/PHOTO-2025-05-12-10-47-29-1.jpg" alt="Saree 15">
+        <img src="https://i.postimg.cc/wMdCDmBk/PHOTO-2025-05-12-10-47-29-2.jpg" data-original="https://i.postimg.cc/85MCwwyq/PHOTO-2025-05-12-10-47-29-2.jpg" alt="Saree 16">
+        <img src="https://i.postimg.cc/PfWsT26V/PHOTO-2025-05-12-10-47-30.jpg" data-original="https://i.postimg.cc/gjK2bjbs/PHOTO-2025-05-12-10-47-30.jpg" alt="Saree 17">           
+        <img src="https://i.postimg.cc/MK5CjXJy/PHOTO-2025-05-12-10-48-25.jpg" data-original="https://i.postimg.cc/jdsjQHyF/PHOTO-2025-05-12-10-48-25.jpg" alt="Saree 18">
+        <img src="https://i.postimg.cc/kX7r4KzJ/PHOTO-2025-05-12-10-48-25-1.jpg" data-original="https://i.postimg.cc/XNKJCHB5/PHOTO-2025-05-12-10-48-25-1.jpg" alt="Saree 19">
+        <img src="https://i.postimg.cc/wByZPVyV/PHOTO-2025-05-12-10-48-26.jpg" data-original="https://i.postimg.cc/9Q0Fsc8P/PHOTO-2025-05-12-10-48-26.jpg" alt="Saree 20">
+        <img src="https://i.postimg.cc/sg2tPy3b/PHOTO-2025-05-12-10-48-26-1.jpg" data-original="https://i.postimg.cc/YSV4dvtm/tmp79-PHOTO-2025-05-12-10-48-26.jpg" alt="Saree 21">
+        <img src="https://i.postimg.cc/nhwN05zr/PHOTO-2025-05-12-10-48-26-2.jpg" data-original="https://i.postimg.cc/zX0GdyjX/PHOTO-2025-05-12-10-48-26-1.jpg" alt="Saree 22">
+
+      </div>
+    </section>
+    <!-- =================== END SAREE COLLECTION SECTION =================== -->
+
+    <!-- =================== TOP CUSTOMERS SECTION =================== -->
+    <section class="top-customers">
+      <h2>Top Customers</h2>
+      <div class="top-customers-carousel">
+        <button class="carousel-arrow left" id="customersPrev" aria-label="Previous">&#8592;</button>
+        <div class="top-customers-stacks" id="topCustomersStacks">
+          <!-- Stack 1 -->
+          <div class="customer-stack active">
+            <div class="customer-card">
+              <img src="https://i.postimg.cc/8z7Q0n1y/top-customer1.jpg" alt="Top Customer 1" class="customer-img">
+              <h3>Srujana</h3>
+              <p>Loyal customer since 2018. Known for her love of custom bridal sarees and unique maggam blouses.</p>
+            </div>
+            <div class="customer-card">
+              <img src="https://i.postimg.cc/8P7nQw2y/top-customer2.jpg" alt="Top Customer 2" class="customer-img">
+              <h3>Srinidhi</h3>
+              <p>Always first to try our latest collections. Appreciates detailed handwork and elegant lehengas.</p>
+            </div>
+            <div class="customer-card">
+              <img src="https://i.postimg.cc/3x3QzSGq/top-customer3.jpg" alt="Top Customer 3" class="customer-img">
+              <h3>Vemula Sridevi</h3>
+              <p>Regularly at our boutique for festive and family occasions. Loves our kidswear and custom tailoring.</p>
+            </div>
+          </div>
+          <!-- Future stacks: add more .customer-stack with 3 .customer-card each -->
+        </div>
+        <button class="carousel-arrow right" id="customersNext" aria-label="Next">&#8594;</button>
+      </div>
+      <div class="carousel-indicators" id="customersIndicators"></div>
+    </section>
+    <!-- =================== END TOP CUSTOMERS SECTION =================== -->
+
+    <!-- =================== REVIEWS SECTION =================== -->
+    <section class="reviews" id="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review-form">
+      <form action="https://formsubmit.co/sandyadesignerboutique@gmail.com" method="POST">
+        <!-- FormSubmit configuration -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://sandyaDesignerBoutique.github.io/Store/thankyou-review.html">
+
+        <!-- User inputs -->
+        <label for="name">Name:</label>
+        <input type="text" id="reviewerName" name="name" placeholder="Enter your name" required>
+
+        <label for="review">Review:</label>
+        <textarea id="reviewText" name="review" rows="4" placeholder="Write your review here..." required></textarea>
+
+        <button type="submit" class="button">Submit Review</button>
+      </form>
+    </div>
+
+    <div class="review-carousel">
+      <h3 class="review-carousel-title">What Our Customers Say</h3>
+      <button class="review-arrow up" aria-label="Previous reviews">&#9650;</button>
+      <div class="review-carousel-viewport">
+        <div class="review-carousel-list" id="reviewCarouselList">
+          <!-- Reviews will be dynamically inserted here by JS for looping -->
+        </div>
+        <div class="review-blur review-blur-top"></div>
+        <div class="review-blur review-blur-bottom"></div>
+      </div>
+      <button class="review-arrow down" aria-label="Next reviews">&#9660;</button>
+    </div>
+    <noscript>
+      <ul id="reviewsContainer">
+        <!-- Fallback: static reviews for no-JS users -->
+        <li><strong>Vipula</strong><p>Customer satisfaction 100 percent</p></li>
+        <li><strong>Sreedevi Deshpandey</strong><p>I've had the pleasure of working with Sandhya garu for everything from bridal wear to custom stitching. The attention to detail, perfect fitting, and quality are always top-notch. What began as a customer relationship has now become a valued friendship. Highly recommend for expert tailoring and excellent service.</p></li>
+        <li><strong>Srinidhi</strong><p>Sandhya aunty gives her 100% for every piece that she picks up for design. What started with my Sister's bridal designs, to my bridal designs and everything after, Sandhya aunty is our go-to person, everything ethnic.</p></li>
+        <li><strong>Vemula sridevi</strong><p>I highly recommend Sandhya Designer Boutique fr high-quality, stylish clothing and especially impressed with their on-time delivery and exclusive designer wear saree Collection</p></li>
+        <li><strong>Kadali Kuntla</strong><p>Lovely designs and great work.</p></li>
+        <li><strong>Polleni Madhav</strong><p>Smart work 👍</p></li>
+        <li><strong>Buzz</strong><p>elegant stitching. Love it.</p></li>
+        <li><strong>Pavanisai Pala</strong><p>Lovely boutique with a great collection. Amazing work!!!</p></li>
+        <li><strong>Prasana Laxmi</strong><p>Excellent designs at affordable prices</p></li>
+        <li><strong>Navyasree P</strong><p>Nice stitching....</p></li>
+        <li><strong>Kruthika</strong><p>Sandhya Boutique offers elegant, handcrafted designs with a personal touch. Perfect for those seeking unique, traditional styles.</p></li>
+      </ul>
+    </noscript>
+  </section>
+  <!-- =================== END REVIEWS SECTION =================== -->
+
+    <!-- =================== CONTACT US SECTION =================== -->
+    <section class="contact-us">
+      <h2>Contact Us</h2>
+      <p>We would love to hear from you! Reach out to us for inquiries, orders, or collaborations.</p>
+      <form action="https://formsubmit.co/sandyadesignerboutique@gmail.com" method="POST">
+        <!-- Formsubmit configuration -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" class="hidden-field" title="Leave this field empty">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://sandyaDesignerBoutique.github.io/Store/thankyou.html">
+      
+        <!-- User inputs -->
+        <label for="contactName">Name:</label>
+        <input type="text" id="contactName" name="name" placeholder="Enter your name" required autocomplete="name">
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email">
+      
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+      
+        <div class="button-container">
+          <button type="submit" class="button">Send Message</button>
+          <span class="or-text">or</span>
+          <a class="button" href="https://linktr.ee/sandyadesignerboutique" target="_blank" rel="noopener" aria-label="Find Us Here! (opens in new tab)">Find Us Here!</a>
+        </div>
+      </form>
+      
+    </section>
+    <!-- =================== END CONTACT US SECTION =================== -->
+
+    <!-- =================== ABOUT US CAROUSEL SECTION =================== -->
+    <section class="about-us-carousel">
+      <h2>About Us</h2>
+      <div class="carousel-container improved-carousel">
+        <button class="carousel-arrow left" id="aboutPrev" aria-label="Previous">&#8592;</button>
+        <div class="carousel-slide" id="aboutCarouselSlides">
+          <!-- Slide 1: About Us -->
+          <div class="carousel-box improved-box">
+            <div class="carousel-card-scale">
+              <div class="carousel-img-col">
+                <div class="carousel-image improved-green-bg">
+                  <img src="https://i.postimg.cc/3RFXPTmr/Founder.jpg" alt="Sandhya Rani Mangalampally">
+                </div>
+              </div>
+              <div class="carousel-content improved-content">
+                <h3>Sandhya Rani Mangalampally</h3>
+                <div class="subtitle">An Entrepreneur &amp; Head Designer</div>
+                <p class="justified-text">At Sandya Designer Boutique, we bring tradition and trend together. Specializing in bridal maggam work, custom pattern blouses and lehengas, elegant long frocks, western wear, kids wear, and a vast collection of sarees, our boutique celebrates craftsmanship and creativity.</p>
+                <p class="justified-text">Every piece is thoughtfully designed and tailored to reflect your style, whether for a wedding, a festive occasion, or a casual celebration. From intricate handwork to contemporary cuts, we make fashion truly personal.</p>
+                <a class="button" href="https://linktr.ee/sandyadesignerboutique" target="_blank" rel="noopener" aria-label="Find Us Here! (opens in new tab)">Find Us Here!</a>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2: Partners or Additional Info -->
+          <div class="carousel-box improved-box">
+            <div class="carousel-card-scale">
+              <div class="carousel-img-col">
+                <div class="carousel-image improved-green-bg">
+                  <img src="https://i.postimg.cc/CKxhJywJ/Creator.png" alt="Kireeti Sourabh Mangalampally">
+                </div>
+              </div>
+              <div class="carousel-content improved-content">
+                <h3>Kireeti Sourabh Mangalampally</h3>
+                <div class="subtitle">Website Creator (Son)</div>
+                <p class="justified-text">I created this website for my mom, Sandhya Rani Mangalampally, who runs Sandya Designer Boutique. With a talented team of tailors and masters, she designs bridal maggam blouses, lehengas, and custom outfits for kids.
+                                </p> <p class="justified-text">She also curates a beautiful collection of sarees and handles all kinds of stitching and embroidery work. Each piece is made with care, precision, and love. I'm proud to support her and share her work through this platform. Thank you 😊</p>
+                <a class="button improved-btn" href="https://linktr.ee/sandyadesignerboutique" target="_blank" rel="noopener" aria-label="Find Us Here! (opens in new tab)">Find Us Here!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-arrow right" id="aboutNext" aria-label="Next">&#8594;</button>
+      </div>
+      <div class="carousel-indicators">
+        <span class="carousel-dot" id="carouselDot0"></span>
+        <span class="carousel-dot" id="carouselDot1"></span>
+      </div>
+    </section>
+    <!-- =================== END ABOUT US CAROUSEL SECTION =================== -->
+  </main>
+
+  <!-- =================== LIGHTBOX SECTION =================== -->
+  <div id="lightbox" class="lightbox hidden">
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Close image">&times;</button>
+      <img id="lightbox-image" src="" alt="Full-size image">
+    </div>
+  </div>
+  <!-- =================== END LIGHTBOX SECTION =================== -->
+
+  <!-- =================== FOOTER SECTION =================== -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-line1">© 2018 Sandya Designer Boutique. All rights reserved | <a href="mailto:sandyadesignerboutique@gmail.com" class="footer-email">info@sandyadesignerboutique.com</a></div>
+      <div class="footer-line2">Created by Kireeti Sourabh Mangalampally | Follow me on
+        <a href="https://instagram.com/mk__sourabh" class="footer-insta-link" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="footer-insta-icon"/>@mk__sourabh
+        </a>
+      </div>
+    </div>
+  </footer>
+  <!-- =================== END FOOTER SECTION =================== -->
+
+  <!-- =================== SCRIPTS SECTION =================== -->
+  <script src="scripts.js"></script>
+  <script>
+    // Filter dropdown toggle logic
+    document.addEventListener('DOMContentLoaded', function() {
+      var filterBtn = document.getElementById('filterDropdownBtn');
+      var filterDropdown = document.getElementById('filterDropdown');
+      if (filterBtn && filterDropdown) {
+        filterBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var isOpen = filterDropdown.style.display === 'block';
+          filterDropdown.style.display = isOpen ? 'none' : 'block';
+        });
+        // Hide dropdown if clicked outside
+        document.addEventListener('click', function(e) {
+          if (!filterDropdown.contains(e.target) && !filterBtn.contains(e.target)) {
+            filterDropdown.style.display = 'none';
+          }
+        });
+      }
+    });
+  </script>
+  <!-- =================== END SCRIPTS SECTION =================== -->
+</body>
+</html>
