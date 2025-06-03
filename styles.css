@@ -1346,9 +1346,64 @@ body.dark-mode .carousel-box.improved-box {
   .carousel-card-scale { flex-direction: column; align-items: center; justify-content: flex-start; width: 100vw; max-width: 100vw; min-width: 0; height: auto; }
 
   /* ================= FOOTER (Mobile) ================= */
-  .site-footer { padding: 0 0; margin: 0 0; border-radius: 0%;  max-width: 100%; width: 100%; }
-  .site-footer .footer-main { font-size: 0.8em; gap: 0.2em; margin-left: 0em; }
-  .site-footer .footer-line1 { font-size: 0.7em; display: block; margin-left: 0em; margin-right: 0em; box-sizing: border-box; word-break: break-word; }
-  .site-footer .footer-line2 { gap: 0.18em; font-size: 0.7em; margin-bottom: 0.2em; }
-  .site-footer .footer-insta-link { margin-left: 0.2em; font-size: 0.8em; }
+.site-footer {
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff; /* Or whatever your background is */
+  color: #000;
+  text-align: center;
+}
+
+.site-footer .footer-main {
+  font-size: 0.8em;
+  gap: 0.2em;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  padding: 0.5em 1em;
+  box-sizing: border-box;
+}
+
+.site-footer .footer-line1 {
+  font-size: 0.7em;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 0.4em auto;
+  box-sizing: border-box;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.site-footer .footer-line2 {
+  font-size: 0.7em;
+  gap: 0.18em;
+  margin: 0 auto 0.2em auto;
+  width: 100%;
+  max-width: 100%;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.site-footer .footer-email {
+  color: #00bfff; /* Adjust as needed */
+  text-decoration: none;
+}
+
+.site-footer .footer-insta-link {
+  margin-left: 0.2em;
+  font-size: 0.8em;
+  color: #f06292; /* Optional styling */
+  text-decoration: none;
+}
+
+.site-footer .footer-insta-icon {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 0.3em;
+}
 }
