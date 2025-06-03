@@ -1286,19 +1286,19 @@ body.dark-mode .carousel-box.improved-box {
   .gallery img { border-radius: 1px; margin: 0; }
 
   /* ================= TOP CUSTOMERS (Mobile) ================= */
-  .top-customers { padding: 1.2rem 0.2rem; }
+  .top-customers { padding: 0rem 2rem; }
   .customer-card p, .customer-card .card-text, .carousel-content.improved-content p { text-align: justify !important; }
   .customer-stack .customer-card { display: none; max-width: 300px; margin: 0 auto; }
   .customer-stack.active .customer-card.active { display: block; }
 
   /* ================= REVIEW CAROUSEL (Mobile) ================= */
   .review-carousel-viewport { height: 400px; }
-  .review-carousel-list .review-item { font-size: 0.92rem; padding: 0.5em 0.7em; margin: 0.4rem 0.5rem 0.4rem 0.5rem; }
+  .review-carousel-list .review-item { font-size: 0.92rem; padding: 0.5em 0.7em; margin: 0.2rem 1rem 0.2rem 1rem; }
   .review-carousel-title { font-size: 1.1rem; margin-bottom: 0.3rem; }
   /* ================= CONTACT US & REVIEWS (Mobile) ================= */
   .contact-us { padding: 1.2rem 0.9rem !important; }
-  .reviews { padding: 0.5rem 0.9rem !important; }
-  .review-form { padding: 0.5rem 0rem !important; max-width: 95%; }
+  .reviews { padding: 1.2rem 0.9rem !important; }
+  .review-form { padding: 1.2rem 0.9rem !important; margin: 0 0; }
 
   /* ================= ABOUT US SECTION (Mobile) ================= */
   .about-content { flex-direction: column; text-align: center; }
