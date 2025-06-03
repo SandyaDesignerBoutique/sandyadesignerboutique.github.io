@@ -1347,10 +1347,11 @@ body.dark-mode .carousel-box.improved-box {
 
 /* ================= FOOTER (Mobile) ================= */
 .site-footer {
-  padding: 0;
-  margin: 0;
+  padding: 0 0;
+  margin: 0 0;
   border-radius: 0;
-  width: 100%;
+  max-width: 100%;
+  width: 95%;
   box-sizing: border-box;
   background-color: #fff; /* Or whatever your background is */
   color: #000;
