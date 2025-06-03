@@ -1282,12 +1282,12 @@ body.dark-mode .carousel-box.improved-box {
   .filter-btn { max-width: 100%; width: 25%; min-width: 50px; font-size: 1rem; padding: 0.2rem 0.5rem; margin-bottom: 0.5rem; }
 
   /* ================= OUR SAREE COLLECTION ================= */
-  .saree-collection { padding: 0rem 2rem; }
+  .saree-collection { padding: 0 1.5rem; margin: 0 0; border-radius: 0%;}/*the blue box but edit margin here*/
   .gallery { grid-template-columns: repeat(3, 1fr); gap: 0.4rem; padding: 0.3rem; width: 109%; }
   .gallery img { border-radius: 1px; margin: 0; }
 
   /* ================= TOP CUSTOMERS (Mobile) ================= */
-  .top-customers { padding: 0rem 2rem; } /*the blue box*/
+  .top-customers { padding: 0 0.5rem 0 0; margin: 0 0 0 0; border-radius: 0%;} /*the blue box but edit margin here*/
   .customer-card p, .customer-card .card-text, .carousel-content.improved-content p { text-align: justify !important; }
   .customer-stack .customer-card { display: none; max-width: 300px; margin: 0 auto; }
   .customer-stack.active .customer-card.active { display: block; }
@@ -1297,8 +1297,8 @@ body.dark-mode .carousel-box.improved-box {
   .review-carousel-list .review-item { font-size: 0.92rem; padding: 0.5em 0.7em; margin: 0.2rem 1rem 0.2rem 1rem; }
   .review-carousel-title { font-size: 1.1rem; margin-bottom: 0.3rem; }
   /* ================= CONTACT US & REVIEWS (Mobile) ================= */
-  .contact-us { padding: 1.2rem 0.9rem !important; }
-  .reviews { padding: 1.2rem 0.9rem !important; }
+  .contact-us { padding: 0 1.5rem; margin: 0 0 0 0; border-radius: 0%;} /*the blue box but edit margin here*/
+  .reviews { padding: 0 1.5rem; margin: 0 0 0 0; border-radius: 0%;} /*the blue box but edit margin here*/
   .review-form { padding: 1.2rem 0.9rem !important; margin: 0 0; }
 
   /* ================= ABOUT US SECTION (Mobile) ================= */
@@ -1309,7 +1309,7 @@ body.dark-mode .carousel-box.improved-box {
   .about-text p { text-align: center; }
   .about-text .justified-text { text-align: justify; }
   /* ================= ABOUT US CAROUSEL (Mobile) ================= */
-  .about-us-carousel { min-height: 600px; transition: none; }
+  .about-us-carousel { padding: 0 0; margin: 0 0 0 0; border-radius: 0%; min-height: 600px; transition: none; }
   .about-us-carousel .carousel-slide { min-height: 550px; max-height: 600px; transition: min-height 0.4s cubic-bezier(0.4,0.2,0.2,1); }
   .about-us-carousel h2 { margin-top: 0rem !important; margin-bottom: 0rem !important; }
   .about-us-carousel .carousel-content.improved-content .button { font-size: 0.85rem; width: 110px; max-width: 110px; padding: 0.4rem 0.1rem; margin: 0.7rem auto 0 auto; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; letter-spacing: 0.01em; }
