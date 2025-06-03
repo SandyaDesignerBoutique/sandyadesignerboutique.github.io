@@ -303,11 +303,11 @@ document.addEventListener('DOMContentLoaded', () => {
 (function() {
   const reviews = [
     { name: "Vipula", text: "Customer satisfaction 100 percent" },
-    { name: "Sreedevi Deshpandey", text: "I've had the pleasure of working with Sandhya garu for everything from bridal wear to custom stitching. The attention to detail, perfect fitting, and quality are always top-notch. What began as a customer relationship has now become a valued friendship. Highly recommend for expert tailoring and excellent service." },
     { name: "Srinidhi", text: "Sandhya aunty gives her 100% for every piece that she picks up for design. What started with my Sister's bridal designs, to my bridal designs and everything after, Sandhya aunty is our go-to person, everything ethnic." },
     { name: "Vemula sridevi", text: "I highly recommend Sandhya Designer Boutique fr high-quality, stylish clothing and especially impressed with their on-time delivery and exclusive designer wear saree Collection" },
     { name: "Kadali Kuntla", text: "Lovely designs and great work." },
     { name: "Polleni Madhav", text: "Smart work 👍" },
+    { name: "Sreedevi Deshpandey", text: "I've had the pleasure of working with Sandhya garu for everything from bridal wear to custom stitching. The attention to detail, perfect fitting, and quality are always top-notch. What began as a customer relationship has now become a valued friendship. Highly recommend for expert tailoring and excellent service." },
     { name: "Buzz", text: "elegant stitching. Love it." },
     { name: "Pavanisai Pala", text: "Lovely boutique with a great collection. Amazing work!!!" },
     { name: "Prasana Laxmi", text: "Excellent designs at affordable prices" },
