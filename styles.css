@@ -1365,7 +1365,6 @@ body.dark-mode .carousel-box.improved-box {
   display: block;
   margin: 0 auto 0.4em auto;
   box-sizing: border-box;
-  word-break: break-word;
   overflow-wrap: anywhere;
 }
 
@@ -1374,7 +1373,6 @@ body.dark-mode .carousel-box.improved-box {
   margin: 0 auto 0.2em auto;
   width: 100%;
   max-width: 100%;
-  word-break: break-word;
   overflow-wrap: anywhere;
 }
 
