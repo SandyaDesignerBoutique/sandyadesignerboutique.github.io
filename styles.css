@@ -1380,7 +1380,7 @@ body.dark-mode .carousel-box.improved-box {
 
 .site-footer .footer-email {
   color: #00bfff; /* Adjust as needed */
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .site-footer .footer-insta-link {
