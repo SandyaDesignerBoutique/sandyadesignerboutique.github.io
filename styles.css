@@ -1310,7 +1310,7 @@ body.dark-mode .carousel-box.improved-box {
   /* ================= REVIEW CAROUSEL (Mobile) ================= */
   .review-carousel-viewport { height: 400px; }
   .review-carousel-list .review-item { font-size: 0.92rem; padding: 0.5em 0.7em; margin: 0.2rem 1rem 0.2rem 1rem; }
-  .review-carousel-title { font-size: 1.1rem; margin-bottom: 0.3rem; }
+  .review-carousel-title { font-size: 1.8rem !important; margin-bottom: 0.3rem; margin-top: -2rem !important; }
   /* ================= CONTACT US & REVIEWS (Mobile) ================= */
   .contact-us { padding: 0.5rem 1.5rem; margin: 0; box-sizing: border-box; border-radius: 0%; max-width: 100%; width: 100%; } /*the blue box but edit margin here*/
   .reviews { padding: 0.5rem 1.5rem; margin: 0; box-sizing: border-box; border-radius: 0%; max-width: 100%; width: 100%; } /*the blue box but edit margin here*/
@@ -1364,8 +1364,4 @@ body.dark-mode .carousel-box.improved-box {
 .site-footer { padding: 0 0; margin: 0 0; border-radius: 0; max-width: 100%; width: 100%; box-sizing: border-box; background-color: #fff; color: #000;  text-align: center; }
 .site-footer .footer-line1 { font-size: 0.6em; width: 100%; max-width: 100%; display: block; margin: 0 auto 0.4em auto; box-sizing: border-box; overflow-wrap: anywhere; }
 .site-footer .footer-line2 { font-size: 0.6em; margin: 0 auto 0.2em auto; width: 100%; max-width: 100%; overflow-wrap: anywhere; }
-.review-carousel-title {
-    font-size: 1.8rem !important;
-    margin: 0 !important;
-  }
 }
