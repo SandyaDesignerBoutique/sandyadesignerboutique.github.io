@@ -723,8 +723,21 @@ body.dark-mode #customersIndicators .carousel-dot.active {
   padding: 0.2rem 0.5rem;
   margin: 0 0 0 -8px;
   box-sizing: border-box;
+  border-radius: 0 !important;
+  outline: none;
 }
-
+.filter-btn:focus, .filter-btn:focus-visible,
+.filter-btn.filter-btn-outline {
+  outline: 2px solid #87ceeb !important;
+  outline-offset: 2px !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.filter-btn:active {
+  outline: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
 .filter-btn-row {
   position: relative;
   max-width: 100%;
@@ -736,19 +749,17 @@ body.dark-mode #customersIndicators .carousel-dot.active {
   padding-left: 0;
   margin-left: 0;
 }
-
 .filter-btn:hover {
   background: linear-gradient(90deg, #7EC8E3 0%, #A3D9EC 100%);
   color: #111;
   transform: translateY(-2px) scale(1.04);
 }
-
 .filter-dropdown {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  width: 260px;
+  width: auto;
   max-width: 900px;
   /* Remove outer box: no background, border, or box-shadow */
   background: #fff8f0 !important;
@@ -771,6 +782,9 @@ body.dark-mode .filter-dropdown {
 }
 .filter-group-header {
   background: rgba(0,0,0,0.06);
+}
+.filter-group-title {
+  font-size: 1rem;
 }
 .filter-group-header.active {
   background: rgba(0,0,0,0.13);
@@ -1289,12 +1303,12 @@ body.dark-mode .carousel-box.improved-box {
   .filter-btn { font-size: 1rem; max-width: 100%; width: 20%; padding: 0; margin: 0 0 0 -1rem; }
 
   /* ================= OUR SAREE COLLECTION ================= */
-  .saree-collection { padding: 0 1.5rem; margin: 0; box-sizing: border-box; border-radius: 0%; max-width: 100%; width: 100%; }/*the blue box but edit margin here*/
+  .saree-collection { padding: 1rem 1.3rem; margin: 0; box-sizing: border-box; border-radius: 0%; max-width: 100%; width: 100%; }/*the blue box but edit margin here*/
   .gallery { grid-template-columns: repeat(3, 1fr); gap: 0.4rem; padding: 0.3rem; width: 109%; }
   .gallery img { border-radius: 1px; margin: 0; }
 
   /* ================= TOP CUSTOMERS (Mobile) ================= */
-  .top-customers { padding: 0 1.5rem; margin: 0; box-sizing: border-box; border-radius: 0%; max-width: 100%; width: 100%; } /*the blue box but edit margin here*/
+  .top-customers { padding: 0 ; margin: 0; box-sizing: border-box; border-radius: 0%; max-width: 100%; width: 100%; } /*the blue box but edit margin here*/
   .customer-card p, .customer-card .card-text, .carousel-content.improved-content p { text-align: justify !important; }
   .customer-stack .customer-card { display: none; max-width: 300px; margin: 0 auto; }
   .customer-stack.active .customer-card.active { display: block; }

@@ -96,14 +96,42 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterBtn = document.getElementById('filterDropdownBtn');
   const filterDropdown = document.getElementById('filterDropdown');
   if (filterBtn && filterDropdown) {
+    let dropdownOpen = false;
+    const arrow = filterBtn.querySelector('.filter-arrow');
     filterBtn.addEventListener('click', function(e) {
       e.stopPropagation();
       var isOpen = filterDropdown.style.display === 'block';
       filterDropdown.style.display = isOpen ? 'none' : 'block';
+      dropdownOpen = !isOpen;
+      if (!isOpen) {
+        // Opening: show outline and set arrow up
+        filterBtn.classList.add('filter-btn-outline');
+        filterBtn.focus();
+        if (arrow) arrow.innerHTML = '&#9650;'; // Upward arrow
+      } else {
+        // Closing: remove outline and set arrow down
+        filterBtn.classList.remove('filter-btn-outline');
+        filterBtn.blur();
+        if (arrow) arrow.innerHTML = '&#9660;'; // Downward arrow
+      }
     });
     document.addEventListener('click', function(e) {
       if (!filterDropdown.contains(e.target) && !filterBtn.contains(e.target)) {
         filterDropdown.style.display = 'none';
+        dropdownOpen = false;
+        filterBtn.classList.remove('filter-btn-outline');
+        filterBtn.blur();
+        if (arrow) arrow.innerHTML = '&#9660;'; // Downward arrow
+      }
+    });
+    // Remove outline on Escape key
+    filterBtn.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        filterDropdown.style.display = 'none';
+        dropdownOpen = false;
+        filterBtn.classList.remove('filter-btn-outline');
+        filterBtn.blur();
+        if (arrow) arrow.innerHTML = '&#9660;'; // Downward arrow
       }
     });
   }
