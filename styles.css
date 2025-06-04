@@ -1303,12 +1303,12 @@ body.dark-mode .carousel-box.improved-box {
   .filter-btn { font-size: 1rem; max-width: 100%; width: 20%; padding: 0; margin: 0 0 0 -1rem; }
 
   /* ================= OUR SAREE COLLECTION ================= */
-  .saree-collection { padding: 1rem 1.3rem; margin: 0; box-sizing: border-box; border-radius: 0%; max-width: 100%; width: 100%; }/*the blue box but edit margin here*/
+  .saree-collection { padding: 1rem 1.3rem 0.5rem 1.3rem; margin: 0; box-sizing: border-box; border-radius: 0%; max-width: 100%; width: 100%; }/*the blue box but edit margin here*/
   .gallery { grid-template-columns: repeat(3, 1fr); gap: 0.4rem; padding: 0.3rem; width: 109%; }
   .gallery img { border-radius: 1px; margin: 0; }
 
   /* ================= TOP CUSTOMERS (Mobile) ================= */
-  .top-customers { padding: 0 ; margin: 0; box-sizing: border-box; border-radius: 0%; max-width: 100%; width: 100%; } /*the blue box but edit margin here*/
+  .top-customers { padding: 0.5rem 0 0 0 ; margin: 0; box-sizing: border-box; border-radius: 0%; max-width: 100%; width: 100%; } /*the blue box but edit margin here*/
   .customer-card p, .customer-card .card-text, .carousel-content.improved-content p { text-align: justify !important; }
   .customer-stack .customer-card { display: none; max-width: 300px; margin: 0 auto; }
   .customer-stack.active .customer-card.active { display: block; }
