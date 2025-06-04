@@ -330,7 +330,6 @@ body.lightbox-active #lightbox-image { filter: none; }
   position: absolute; top: 16px; right: 24px;
   background: transparent; border: none; font-size: 2rem; color: #fff; cursor: pointer; z-index: 10;
 }
-.review-form { margin-bottom: 0.8rem !important; }
 .top-customers {
   background: #fafafa;
   border-radius: 16px;
@@ -1114,9 +1113,6 @@ body.dark-mode .review-blur-bottom {
 body.dark-mode .review-carousel-title {
   color: #f3f3f3;
 }
-.review-form {
-  margin-bottom: 0.8rem !important;
-}
 .review-carousel-title {
   margin-top: 0 !important;
   margin-bottom: 0.3rem;
@@ -1270,11 +1266,9 @@ body.dark-mode .carousel-box.improved-box {
     drop-shadow(-0.5px 0.5px 0 #833AB4)
     drop-shadow(0.5px 0.5px 0 #f502f5);
 }
-
-/* Mobile Styles */
-
+/* ================= MEDIA QUERIES: MOBILE VIEW ================= */
 @media (max-width: 700px) {
-  /* ================= HEADER & BYLINE (Mobile) ================= */
+  /* ================= HEADER (Mobile) ================= */
   header { padding: 4.5rem 2rem; }
   .header-content { flex-direction: column; gap: 10px; }
   .header-image { max-width: 120px; }
@@ -1370,4 +1364,8 @@ body.dark-mode .carousel-box.improved-box {
 .site-footer { padding: 0 0; margin: 0 0; border-radius: 0; max-width: 100%; width: 100%; box-sizing: border-box; background-color: #fff; color: #000;  text-align: center; }
 .site-footer .footer-line1 { font-size: 0.6em; width: 100%; max-width: 100%; display: block; margin: 0 auto 0.4em auto; box-sizing: border-box; overflow-wrap: anywhere; }
 .site-footer .footer-line2 { font-size: 0.6em; margin: 0 auto 0.2em auto; width: 100%; max-width: 100%; overflow-wrap: anywhere; }
+.review-carousel-title {
+    font-size: 1.8rem !important;
+    margin: 0 !important;
+  }
 }
