@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Sandya Designer Boutique",
-    "url": "https://sandyadesignerboutique.github.io/Store/",
+    "url": "https://sandyadesignerboutique.com/",
     "logo": "https://i.postimg.cc/PrK4fMtb/goldennn-1.png"
   };
   if (!document.querySelector('script[type="application/ld+json"][data-org-jsonld]')) {
