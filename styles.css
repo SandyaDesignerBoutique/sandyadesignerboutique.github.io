@@ -1216,8 +1216,9 @@ body.dark-mode .carousel-box.improved-box {
   display: block;
 }
 .numbered-contact-buttons {
-    position: absolute;
-  left: 45.2%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1266,6 +1267,14 @@ body.dark-mode .carousel-box.improved-box {
     drop-shadow(-0.5px 0.5px 0 #833AB4)
     drop-shadow(0.5px 0.5px 0 #f502f5);
 }
+.numbered-contact-btn:nth-child(4):hover img,
+.numbered-contact-btn:nth-child(4):focus img {
+  filter:
+    drop-shadow(-0.5px -0.5px 0 #1DA1F2)
+    drop-shadow(0.5px -0.5px 0 #00acee)
+    drop-shadow(-0.5px 0.5px 0 #00bfff)
+    drop-shadow(0.5px 0.5px 0 #00c6ff);
+}
 /* ================= MEDIA QUERIES: MOBILE VIEW ================= */
 @media (max-width: 700px) {
   /* ================= HEADER (Mobile) ================= */
@@ -1280,8 +1289,8 @@ body.dark-mode .carousel-box.improved-box {
   /* ================= LOGO & CONTACT BUTTONS (Mobile) ================= */
   .logo-box { top: 12px; width: 60px; height: 60px; border-width: 2px; }
   .logo-img { width: 200px; height: 200px; }
-  .numbered-contact-buttons { left: 35%; gap: 10px; margin-top: 15px; }
-  .numbered-contact-btn img { height: 30px; width: 30px; }
+  .numbered-contact-buttons { position: absolute; left: 50%; transform: translateX(-50%); gap: 12px; margin-top: 10px; }
+  .numbered-contact-btn img { height: 25px; width: 25px; }
 
   /* ================= SECTION HEADINGS (Mobile) ================= */
   .saree-collection h2,
