@@ -6,7 +6,7 @@
 
 <img src="https://i.postimg.cc/4dTG7JTx/Logo.png" alt="Logo" width="200"/> <img src="https://i.postimg.cc/RZrv5VJZ/20250520-054002000-i-OS.jpg" alt="Store - Exterior" width="200"/> <img src="https://i.postimg.cc/wBQNRrYD/Welcome.png" alt="Welcome Banner" width="300"/>
 
-### Visit our 🌐Online Store: https://sandyadesignerboutique.github.io/Store/
+### Visit our 🌐Online Store: https://sandyadesignerboutique.com/
 
 ### Find Us Here: https://linktr.ee/sandyadesignerboutique
 
