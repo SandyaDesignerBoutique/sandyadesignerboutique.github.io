@@ -202,6 +202,266 @@
         <img src="https://i.postimg.cc/wByZPVyV/PHOTO-2025-05-12-10-48-26.jpg" data-original="https://i.postimg.cc/9Q0Fsc8P/PHOTO-2025-05-12-10-48-26.jpg" alt="Saree 20">
         <img src="https://i.postimg.cc/sg2tPy3b/PHOTO-2025-05-12-10-48-26-1.jpg" data-original="https://i.postimg.cc/YSV4dvtm/tmp79-PHOTO-2025-05-12-10-48-26.jpg" alt="Saree 21">
         <img src="https://i.postimg.cc/nhwN05zr/PHOTO-2025-05-12-10-48-26-2.jpg" data-original="https://i.postimg.cc/zX0GdyjX/PHOTO-2025-05-12-10-48-26-1.jpg" alt="Saree 22">
+        <!-- More Button as Image -->
+        <a href="https://drive.google.com/drive/folders/15z87-EebH8EWMZq2ecq6u0x6F2PdIU7e?usp=sharing" class="more-button">
+          <img src="https://i.postimg.cc/28JmfzY2/Chat-GPT-Image-Jun-30-2025-05-25-36-PM.png" data-original="https://i.postimg.cc/0QRWxBX6/20250701-012207692-i-OS.png" alt="More">
+        </a>
+      </div>
+    </section>
+    
+    <!-- Our Works Section (Duplicate of Saree Collection) -->
+    <section class="saree-collection">
+      <h2>Our Works</h2>
+      <div class="filter-btn-row">
+        <button class="button filter-btn" type="button" aria-label="Filter Our Works Collection" id="filterDropdownBtnWorks">
+          Filter <span class="filter-arrow">&#9660;</span>
+        </button>
+        <div class="filter-dropdown" id="filterDropdownWorks" role="dialog" aria-modal="true" aria-label="Filter Our Works Collection">
+          <div class="filter-accordion">
+            <!-- Filter Groups (Accordion) -->
+            <div class="filter-group" data-group="type">
+              <div class="filter-group-header">
+                <button class="filter-group-toggle" aria-expanded="true" aria-controls="filter-type-options-works" tabindex="0">
+                  <span class="filter-group-icon">–</span>
+                  <span class="filter-group-title">Type / Occasion</span>
+                </button>
+                <span class="filter-group-actions">
+                  <a href="#" class="filter-select-all" tabindex="0">Select All</a>
+                  <span class="filter-action-divider">|</span>
+                  <a href="#" class="filter-clear-all" tabindex="0">Clear All</a>
+                </span>
+              </div>
+              <div class="filter-options" id="filter-type-options-works">
+                <label><input type="checkbox" value="Bridal" class="filter-type"> Bridal</label>
+                <label><input type="checkbox" value="Festive" class="filter-type"> Festive</label>
+                <label><input type="checkbox" value="Party Wear" class="filter-type"> Party Wear</label>
+                <label><input type="checkbox" value="Casual" class="filter-type"> Casual</label>
+                <label><input type="checkbox" value="Office Wear" class="filter-type"> Office Wear</label>
+                <label><input type="checkbox" value="Haldi / Mehndi" class="filter-type"> Haldi / Mehndi</label>
+              </div>
+            </div>
+            <div class="filter-group" data-group="color">
+              <div class="filter-group-header">
+                <button class="filter-group-toggle" aria-expanded="false" aria-controls="filter-color-options-works" tabindex="0">
+                  <span class="filter-group-icon">+</span>
+                  <span class="filter-group-title">Color</span>
+                </button>
+                <span class="filter-group-actions">
+                  <a href="#" class="filter-select-all" tabindex="0">Select All</a>
+                  <span class="filter-action-divider">|</span>
+                  <a href="#" class="filter-clear-all" tabindex="0">Clear All</a>
+                </span>
+              </div>
+              <div class="filter-options" id="filter-color-options-works" hidden>
+                <label><input type="checkbox" value="Red" class="filter-color"> Red</label>
+                <label><input type="checkbox" value="Green" class="filter-color"> Green</label>
+                <label><input type="checkbox" value="Blue" class="filter-color"> Blue</label>
+                <label><input type="checkbox" value="Yellow" class="filter-color"> Yellow</label>
+                <label><input type="checkbox" value="Pink" class="filter-color"> Pink</label>
+                <label><input type="checkbox" value="Black" class="filter-color"> Black</label>
+                <label><input type="checkbox" value="White / Off-white" class="filter-color"> White / Off-white</label>
+                <label><input type="checkbox" value="Multicolor" class="filter-color"> Multicolor</label>
+              </div>
+            </div>
+            <div class="filter-group" data-group="fabric">
+              <div class="filter-group-header">
+                <button class="filter-group-toggle" aria-expanded="false" aria-controls="filter-fabric-options-works" tabindex="0">
+                  <span class="filter-group-icon">+</span>
+                  <span class="filter-group-title">Fabric</span>
+                </button>
+                <span class="filter-group-actions">
+                  <a href="#" class="filter-select-all" tabindex="0">Select All</a>
+                  <span class="filter-action-divider">|</span>
+                  <a href="#" class="filter-clear-all" tabindex="0">Clear All</a>
+                </span>
+              </div>
+              <div class="filter-options" id="filter-fabric-options-works" hidden>
+                <label><input type="checkbox" value="Silk" class="filter-fabric"> Silk</label>
+                <label><input type="checkbox" value="Cotton" class="filter-fabric"> Cotton</label>
+                <label><input type="checkbox" value="Georgette" class="filter-fabric"> Georgette</label>
+                <label><input type="checkbox" value="Chiffon" class="filter-fabric"> Chiffon</label>
+                <label><input type="checkbox" value="Organza" class="filter-fabric"> Organza</label>
+                <label><input type="checkbox" value="Net" class="filter-fabric"> Net</label>
+              </div>
+            </div>
+            <div class="filter-group" data-group="work">
+              <div class="filter-group-header">
+                <button class="filter-group-toggle" aria-expanded="false" aria-controls="filter-work-options-works" tabindex="0">
+                  <span class="filter-group-icon">+</span>
+                  <span class="filter-group-title">Work / Design</span>
+                </button>
+                <span class="filter-group-actions">
+                  <a href="#" class="filter-select-all" tabindex="0">Select All</a>
+                  <span class="filter-action-divider">|</span>
+                  <a href="#" class="filter-clear-all" tabindex="0">Clear All</a>
+                </span>
+              </div>
+              <div class="filter-options" id="filter-work-options-works" hidden>
+                <label><input type="checkbox" value="Zari" class="filter-work"> Zari</label>
+                <label><input type="checkbox" value="Embroidery" class="filter-work"> Embroidery</label>
+                <label><input type="checkbox" value="Printed" class="filter-work"> Printed</label>
+                <label><input type="checkbox" value="Maggam" class="filter-work"> Maggam</label>
+                <label><input type="checkbox" value="Mirror" class="filter-work"> Mirror</label>
+              </div>
+            </div>
+            <div class="filter-group" data-group="price">
+              <div class="filter-group-header">
+                <button class="filter-group-toggle" aria-expanded="false" aria-controls="filter-price-options-works" tabindex="0">
+                  <span class="filter-group-icon">+</span>
+                  <span class="filter-group-title">Price Range</span>
+                </button>
+                <span class="filter-group-actions">
+                  <a href="#" class="filter-select-all" tabindex="0">Select All</a>
+                  <span class="filter-action-divider">|</span>
+                  <a href="#" class="filter-clear-all" tabindex="0">Clear All</a>
+                </span>
+              </div>
+              <div class="filter-options" id="filter-price-options-works" hidden>
+                <label><input type="checkbox" value="Below 1000" class="filter-price"> Below Rs.1000</label>
+                <label><input type="checkbox" value="1000-2000" class="filter-price"> Rs.1000-2000</label>
+                <label><input type="checkbox" value="2000-3000" class="filter-price"> Rs.2000-3000</label>
+                <label><input type="checkbox" value="3000-5000" class="filter-price"> Rs.3000-5000</label>
+                <label><input type="checkbox" value="5000+" class="filter-price"> Rs.5000+</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery">
+        <!-- Duplicate the same images for now, you can update with different images later -->
+        <img src="https://i.postimg.cc/0NZPF7yJ/istockphoto-1398619494-612x612-jpgkhjb-hjvb.jpg" data-original="https://i.postimg.cc/K4X2BNJC/istockphoto-1398619494-612x612.jpg" alt="Work 1">
+        <!-- More Button as Image -->
+        <a href="https://drive.google.com/drive/folders/1W3JbL7s4cMtTqhHXFSaW4ycld9GiPmpl?usp=sharing" class="more-button">
+          <img src="https://i.postimg.cc/44QbMd6R/16449e21-0586-467e-9ad1-42ded33d7676.png" data-original="https://i.postimg.cc/XJ4fsSDg/20250701-011036979-i-OS.png" alt="More">
+        </a>
+      </div>
+    </section>
+
+    <!-- Kid's Section (Duplicate of Saree Collection) -->
+    <section class="saree-collection">
+      <h2>Kid's Section</h2>
+      <div class="filter-btn-row">
+        <button class="button filter-btn" type="button" aria-label="Filter Kid's Collection" id="filterDropdownBtnKids">
+          Filter <span class="filter-arrow">&#9660;</span>
+        </button>
+        <div class="filter-dropdown" id="filterDropdownKids" role="dialog" aria-modal="true" aria-label="Filter Kid's Collection">
+          <div class="filter-accordion">
+            <!-- Filter Groups (Accordion) -->
+            <div class="filter-group" data-group="type">
+              <div class="filter-group-header">
+                <button class="filter-group-toggle" aria-expanded="true" aria-controls="filter-type-options-kids" tabindex="0">
+                  <span class="filter-group-icon">–</span>
+                  <span class="filter-group-title">Type / Occasion</span>
+                </button>
+                <span class="filter-group-actions">
+                  <a href="#" class="filter-select-all" tabindex="0">Select All</a>
+                  <span class="filter-action-divider">|</span>
+                  <a href="#" class="filter-clear-all" tabindex="0">Clear All</a>
+                </span>
+              </div>
+              <div class="filter-options" id="filter-type-options-kids">
+                <label><input type="checkbox" value="Bridal" class="filter-type"> Bridal</label>
+                <label><input type="checkbox" value="Festive" class="filter-type"> Festive</label>
+                <label><input type="checkbox" value="Party Wear" class="filter-type"> Party Wear</label>
+                <label><input type="checkbox" value="Casual" class="filter-type"> Casual</label>
+                <label><input type="checkbox" value="Office Wear" class="filter-type"> Office Wear</label>
+                <label><input type="checkbox" value="Haldi / Mehndi" class="filter-type"> Haldi / Mehndi</label>
+              </div>
+            </div>
+            <div class="filter-group" data-group="color">
+              <div class="filter-group-header">
+                <button class="filter-group-toggle" aria-expanded="false" aria-controls="filter-color-options-kids" tabindex="0">
+                  <span class="filter-group-icon">+</span>
+                  <span class="filter-group-title">Color</span>
+                </button>
+                <span class="filter-group-actions">
+                  <a href="#" class="filter-select-all" tabindex="0">Select All</a>
+                  <span class="filter-action-divider">|</span>
+                  <a href="#" class="filter-clear-all" tabindex="0">Clear All</a>
+                </span>
+              </div>
+              <div class="filter-options" id="filter-color-options-kids" hidden>
+                <label><input type="checkbox" value="Red" class="filter-color"> Red</label>
+                <label><input type="checkbox" value="Green" class="filter-color"> Green</label>
+                <label><input type="checkbox" value="Blue" class="filter-color"> Blue</label>
+                <label><input type="checkbox" value="Yellow" class="filter-color"> Yellow</label>
+                <label><input type="checkbox" value="Pink" class="filter-color"> Pink</label>
+                <label><input type="checkbox" value="Black" class="filter-color"> Black</label>
+                <label><input type="checkbox" value="White / Off-white" class="filter-color"> White / Off-white</label>
+                <label><input type="checkbox" value="Multicolor" class="filter-color"> Multicolor</label>
+              </div>
+            </div>
+            <div class="filter-group" data-group="fabric">
+              <div class="filter-group-header">
+                <button class="filter-group-toggle" aria-expanded="false" aria-controls="filter-fabric-options-kids" tabindex="0">
+                  <span class="filter-group-icon">+</span>
+                  <span class="filter-group-title">Fabric</span>
+                </button>
+                <span class="filter-group-actions">
+                  <a href="#" class="filter-select-all" tabindex="0">Select All</a>
+                  <span class="filter-action-divider">|</span>
+                  <a href="#" class="filter-clear-all" tabindex="0">Clear All</a>
+                </span>
+              </div>
+              <div class="filter-options" id="filter-fabric-options-kids" hidden>
+                <label><input type="checkbox" value="Silk" class="filter-fabric"> Silk</label>
+                <label><input type="checkbox" value="Cotton" class="filter-fabric"> Cotton</label>
+                <label><input type="checkbox" value="Georgette" class="filter-fabric"> Georgette</label>
+                <label><input type="checkbox" value="Chiffon" class="filter-fabric"> Chiffon</label>
+                <label><input type="checkbox" value="Organza" class="filter-fabric"> Organza</label>
+                <label><input type="checkbox" value="Net" class="filter-fabric"> Net</label>
+              </div>
+            </div>
+            <div class="filter-group" data-group="work">
+              <div class="filter-group-header">
+                <button class="filter-group-toggle" aria-expanded="false" aria-controls="filter-work-options-kids" tabindex="0">
+                  <span class="filter-group-icon">+</span>
+                  <span class="filter-group-title">Work / Design</span>
+                </button>
+                <span class="filter-group-actions">
+                  <a href="#" class="filter-select-all" tabindex="0">Select All</a>
+                  <span class="filter-action-divider">|</span>
+                  <a href="#" class="filter-clear-all" tabindex="0">Clear All</a>
+                </span>
+              </div>
+              <div class="filter-options" id="filter-work-options-kids" hidden>
+                <label><input type="checkbox" value="Zari" class="filter-work"> Zari</label>
+                <label><input type="checkbox" value="Embroidery" class="filter-work"> Embroidery</label>
+                <label><input type="checkbox" value="Printed" class="filter-work"> Printed</label>
+                <label><input type="checkbox" value="Maggam" class="filter-work"> Maggam</label>
+                <label><input type="checkbox" value="Mirror" class="filter-work"> Mirror</label>
+              </div>
+            </div>
+            <div class="filter-group" data-group="price">
+              <div class="filter-group-header">
+                <button class="filter-group-toggle" aria-expanded="false" aria-controls="filter-price-options-kids" tabindex="0">
+                  <span class="filter-group-icon">+</span>
+                  <span class="filter-group-title">Price Range</span>
+                </button>
+                <span class="filter-group-actions">
+                  <a href="#" class="filter-select-all" tabindex="0">Select All</a>
+                  <span class="filter-action-divider">|</span>
+                  <a href="#" class="filter-clear-all" tabindex="0">Clear All</a>
+                </span>
+              </div>
+              <div class="filter-options" id="filter-price-options-kids" hidden>
+                <label><input type="checkbox" value="Below 1000" class="filter-price"> Below Rs.1000</label>
+                <label><input type="checkbox" value="1000-2000" class="filter-price"> Rs.1000-2000</label>
+                <label><input type="checkbox" value="2000-3000" class="filter-price"> Rs.2000-3000</label>
+                <label><input type="checkbox" value="3000-5000" class="filter-price"> Rs.3000-5000</label>
+                <label><input type="checkbox" value="5000+" class="filter-price"> Rs.5000+</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery">
+        <!-- Duplicate the same images for now, you can update with different images later -->
+        <img src="https://i.postimg.cc/0NZPF7yJ/istockphoto-1398619494-612x612-jpgkhjb-hjvb.jpg" data-original="https://i.postimg.cc/K4X2BNJC/istockphoto-1398619494-612x612.jpg" alt="Kids 1">
+        <!-- More Button as Image -->
+        <a href="https://drive.google.com/drive/folders/1KHh3R9iCdR9q-ngofL8BT4YOGBlXmU-P?usp=sharing" class="more-button">
+          <img src="https://i.postimg.cc/mZ3ky1QC/7ecab25c-015c-4c22-931d-1a1415b662df.png" data-original="https://i.postimg.cc/G2XyzBDc/20250701-012122746-i-OS.png" alt="More">
+        </a>
       </div>
     </section>
 
